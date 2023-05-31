@@ -1,0 +1,5 @@
+Step:
+
+1. git clone https://github.com/azilkhaq/eduwork_tb_kelompok_a.git
+2. git checkout -b nama_masing_masing
+
