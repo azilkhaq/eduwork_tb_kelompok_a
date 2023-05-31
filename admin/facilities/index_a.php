@@ -21,11 +21,9 @@ $query = mysqli_query($koneksi,"SELECT*FROM facilities");
         <thead>
         <tr>
             
-            <th>id</th>
+            
             <th>Facility Name</th>
             <th>Tour Id</th>
-            <th>Created At</th>
-            <th>Updated At</th>
             <th>Action</th>
         </tr>
         </thead>
@@ -36,11 +34,9 @@ $query = mysqli_query($koneksi,"SELECT*FROM facilities");
                 ?>
                 <tr>
                    
-                    <td><?php echo $data["id"];?></td>
+                    
                     <td><?php echo $data["facility_name"]?></td>
                     <td><?php echo $data["tour_id"]?></td>
-                    <td><?php echo $data["created_at"]?></td>
-                    <td><?php echo $data["updated_at"]?></td>
                     <td>
                         <a href="edit_a.php?id=<?php echo $data ["id"]; ?>">Edit</a>
                         <a href="proses_hapus_a.php?id=<?php echo $data["id"]; ?> ">Delete</a>
