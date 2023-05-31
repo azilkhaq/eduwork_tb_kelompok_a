@@ -163,7 +163,7 @@
             <div class="container">
                 <div class="copyright-inner rounded p-3 d-md-flex align-items-center justify-content-between">
                     <div class="copyright-text">
-                        <p class="m-0 white">2022 Travelin. All rights reserved.</p>
+                        <p class="m-0 white">2023 Travelin. All rights reserved.</p>
                     </div>
                     <div class="social-links">
                         <ul>

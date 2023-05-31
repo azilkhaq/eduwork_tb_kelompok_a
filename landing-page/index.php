@@ -26,58 +26,7 @@ include_once("./layouts-landing/head.php");
                             <h1>Start Planning Your Dream Trip Today!</h1>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore</p>
-                            <div class="book-form">
-                                <div class="row d-flex align-items-center justify-content-between">
-                                    <div class="col-lg-6 mb-2">
-                                        <div class="form-group">
-                                            <div class="input-box">
-                                                <select class="niceSelect">
-                                                    <option value="1">Destination</option>
-                                                    <option value="2">Argentina</option>
-                                                    <option value="3">Belgium</option>
-                                                    <option value="4">Canada</option>
-                                                    <option value="5">Denmark</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mb-2">
-                                        <div class="form-group">
-                                            <div class="input-box">
-                                                <input type="date" name="date">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mb-2">
-                                        <div class="form-group">
-                                            <div class="input-box">
-                                                <select class="niceSelect">
-                                                    <option value="1">Travel Type</option>
-                                                    <option value="2">City Tour</option>
-                                                    <option value="3">Family Tour</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mb-2">
-                                        <div class="form-group">
-                                            <div class="input-box">
-                                                <select class="niceSelect">
-                                                    <option value="1">Tour Duration</option>
-                                                    <option value="2">5 days</option>
-                                                    <option value="3">7 Days</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group mb-0 text-center">
-                                            <a href="#" class="nir-btn w-100"><i class="fa fa-search mr-2"></i> Search
-                                                Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4">
@@ -324,7 +273,7 @@ include_once("./layouts-landing/head.php");
                 <div class="row d-flex align-items-center justify-content-between">
                     <div class="col-lg-6 mb-4 pe-4">
                         <div class="about-image overflow-hidden">
-                            <img src="images/travel1.png" alt="">
+                            <img src="assets/images/travel1.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4 ps-4">
@@ -847,7 +796,7 @@ include_once("./layouts-landing/head.php");
                         </div>
                         <div class="video-button text-center position-relative">
                             <div class="call-button text-center">
-                            <iframe width="1424" height="652" src="https://www.youtube.com/embed/BFS9n4B_2xA" title="Bali in 8k ULTRA HD HDR -  Paradise of Asia (60 FPS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="1424" height="400" src="https://www.youtube.com/embed/BFS9n4B_2xA" title="Bali in 8k ULTRA HD HDR -  Paradise of Asia (60 FPS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             <div class="video-figure"></div>
                         </div>
@@ -1078,7 +1027,7 @@ include_once("./layouts-landing/head.php");
             <div class="row align-items-center">
                 <div class="col-lg-5 pe-4">
                     <div class="testimonial-image">
-                        <img src="images/travel2.png" alt="">
+                        <img src="assets/images/travel2.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 ps-4">
@@ -1086,7 +1035,7 @@ include_once("./layouts-landing/head.php");
                         <div class="col-sm-4 item">
                             <div class="testimonial-item1 rounded">
                                 <div class="author-info d-flex align-items-center mb-4">
-                                    <img src="images/testimonial/img1.jpg" alt="">
+                                    <img src="assets/images/testimonial/img1.jpg" alt="">
                                     <div class="author-title ms-3">
                                         <h5 class="m-0 theme">Jared Erondu</h5>
                                         <span>Supervisor</span>
@@ -1103,7 +1052,7 @@ include_once("./layouts-landing/head.php");
                         <div class="col-sm-4 item">
                             <div class="testimonial-item1 rounded">
                                 <div class="author-info d-flex align-items-center mb-4">
-                                    <img src="images/testimonial/img1.jpg" alt="">
+                                    <img src="assets/images/testimonial/img1.jpg" alt="">
                                     <div class="author-title ms-3">
                                         <h5 class="m-0 theme">Jared Erondu</h5>
                                         <span>Supervisor</span>
