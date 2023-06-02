@@ -1,44 +1,59 @@
-<?php
-include "koneksi_a.php";
-$query = mysqli_query($koneksi,"SELECT*FROM tours");
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-      <title>Tambah Data</title>
+    <title>Tambah Data</title>
 </head>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
 <body>
+
+<h3>Tambah Data Facility</h3>
+
+<div>
 <form action="proses_a.php" method="post" name="formValidation" id="formValidation">
-    <div class="container">
-        <tr>
-            
-            <td><input type="text" name ="facility_name" id="facility_name" placeholder="Facility Name" required></td>
-            
-        </tr> 
-        <tr>
-            
-            
-            <td>
-                <label for="">Tours :</label><select name="tour_id">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-</select></td>
-            <td>
-                <input type="submit" name="submit" value ="Submit" id="submit">
-            </td>
-          </tr>
-          </div>
-    </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <label for="facility">Facility Name</label>
+    <input type="text" id="facility" name="facility_name" placeholder="Facility name..">
+
+    <label for="tour_id">Tour Id</label>
+    <select id="Tour_id" name="tour_id">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+  
+    <input type="submit" value="Tambah">
+  </form>
+</div>
 
 </body>
 </html>

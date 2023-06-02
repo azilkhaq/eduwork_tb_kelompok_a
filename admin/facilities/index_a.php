@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Data</title>
+    <title>Facilities</title>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
@@ -11,40 +11,42 @@
     
 </head>
 <body>
-<?php
-include "koneksi_a.php";
-$query = mysqli_query($koneksi,"SELECT*FROM facilities");
-?>
-<div class="container" style="margin-bottom: 200px;">
-<table  id="mytable" class="display" cellpadding="10" cellspacing="0" class="table table-striped">
-<a href="tambah_a.php">Tambah data</a>
+    <div class="container">
+        
+    <table  id="mytable" class="display" cellpadding="10" cellspacing="0" class="table table-striped">
+     <a href="tambah_a.php" class="btn btn-primary mt-4 mb-4">Tambah data</a>
         <thead>
-        <tr>
-            
-            
-            <th>Facility Name</th>
-            <th>Tour Id</th>
-            <th>Action</th>
-        </tr>
+            <tr>
+                <th widht="200px" class="text-center">ID</th>
+                <th widht="200px" class="text-center">Facility Name</th>
+                <th widht="200px" class="text-center">Tour id</th>
+                <th widht="200px" class="text-center">Aksi</th>
+                
+            </tr>  
         </thead>
-        <?php if(mysqli_num_rows($query)>0) {?>
-            <?php
-               
-                while ($data = mysqli_fetch_array($query)) {
-                ?>
-                <tr>
-                   
-                    
-                    <td><?php echo $data["facility_name"]?></td>
-                    <td><?php echo $data["tour_id"]?></td>
-                    <td>
-                        <a href="edit_a.php?id=<?php echo $data ["id"]; ?>">Edit</a>
-                        <a href="proses_hapus_a.php?id=<?php echo $data["id"]; ?> ">Delete</a>
-                    </td>
-                </tr>
-                <?php  }?>
-        <?php }?>
+
+  
+       
+            
+        
+        <?php
+            include ('koneksi_a.php');
+            $query = mysqli_query($koneksi, "SELECT * FROM facilities");
+            while($data = mysqli_fetch_array($query)){
+        ?>
+        <tr>
+            <td class="text-center"><?php echo $data['id'] ?></td>
+            <td class="text-center"><?php echo $data['facility_name'] ?></td>
+            <td class="text-center"><?php echo $data['tour_id'] ?></td>
+            <td class="text-center">
+            <a  class="btn btn-warning" href="edit_a.php?id=<?= $data['id']; ?>">Edit</a>
+            <a  class="btn btn-danger" href="proses_hapus_a.php?id=<?= $data['id']; ?> " onclick="return confirm('Yakin dihapus')">Delete</a>
+        </tr>
+        <?php 
+            } 
+        ?>
     </table>
+    </div>
     </body>
 </html>
 <script type="text/javascript">
