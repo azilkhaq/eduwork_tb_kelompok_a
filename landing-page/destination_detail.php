@@ -173,7 +173,7 @@ include_once("./layouts-landing/head.php");
                                             <article class="post">
                                                 <div class="s-content d-flex align-items-center justify-space-between">
                                                     <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/trending/trending4.jpg" alt=""></a>
+                                                        <a href="detail-1.html"><img src="assets/images/trending/kebun-bogor.jpg" alt=""></a>
                                                     </div>
                                                     <div class="content-list w-75">
                                                         <h5 class="mb-1"><a href="detail-1.html">Kebun Raya - Bogor</a></h5>

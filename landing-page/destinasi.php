@@ -50,7 +50,7 @@ include_once("./layouts-landing/head.php");
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
                                 <h5 class="theme mb-1">Wisata Alam</h5>
-                                <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
+                                <h4><a href="destination_detail.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
                                 <p class="mb-3">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 </p>
@@ -68,12 +68,12 @@ include_once("./layouts-landing/head.php");
                 <div class="col-lg-4 col-md-6">
                     <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
                         <div class="trend-image">
-                            <img src="assets/images/trending/pasar-lama.jpg" alt="image">
+                            <img src="assets/images/trending/pasar-lama.png" alt="image">
                         </div>
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
                                 <h5 class="theme mb-1">Wisata Sejarah</h5>
-                                <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
+                                <h4><a href="destination_detail.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
                                 <p class="mb-3">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 </p>
@@ -96,7 +96,7 @@ include_once("./layouts-landing/head.php");
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
                                 <h5 class="theme mb-1">Wisata Budaya</h5>
-                                <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
+                                <h4><a href="destination_detail.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
                                 <p class="mb-3">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 </p>
