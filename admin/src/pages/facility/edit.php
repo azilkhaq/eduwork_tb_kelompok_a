@@ -2,7 +2,7 @@
 include('connection.php');
 $id=$_GET['id'];
 
-$query = mysqli_query($koneksi, "SELECT*FROM facilities WHERE id='$id'");
+$query = mysqli_query($koneksi, "SELECT * FROM facilities WHERE id='$id'");
 
 while ($facilities = mysqli_fetch_array($query)){
     $facility_name = $facilities['facility_name'];
