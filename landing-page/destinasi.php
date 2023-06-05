@@ -15,17 +15,17 @@ include_once("./layouts-landing/head.php");
     ?>
     <div class="tet"></div>
 
-     <!-- BreadCrumb Starts -->  
-     <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(assets/images/bg/bg1.jpg);">
+    <!-- BreadCrumb Starts -->
+    <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(assets/images/bg/bg1.jpg);">
         <div class="section-shape section-shape1 top-inherit bottom-0" style="background-image: url(assets/images/shape8.png);"></div>
         <div class="breadcrumb-outer">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="mb-3">Destination List</h1>
+                    <h1 class="mb-3">Wisata</h1>
                     <nav aria-label="breadcrumb" class="d-block">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Destination Lists</li>
+                            <li class="breadcrumb-item active" aria-current="page">Wisata</li>
                         </ul>
                     </nav>
                 </div>
@@ -33,149 +33,80 @@ include_once("./layouts-landing/head.php");
         </div>
         <div class="dot-overlay"></div>
     </section>
-    <!-- BreadCrumb Ends --> 
+    <!-- BreadCrumb Ends -->
 
     <!-- top Destination starts -->
     <section class="trending pb-0 pt-6">
         <div class="container">
             <div class="section-title mb-6 w-50 mx-auto text-center">
-                <h4 class="mb-1 theme1">Top Destinations</h4>
-                <h2 class="mb-1">Explore <span class="theme">Top Destinations</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <h2 class="mb-1">Daftar <span class="theme">Wisata</span></h2>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination17.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Italy</a></h5>
-                                    <h3 class="mb-0 white">Caspian Valley</h3>
+                <div class="col-lg-4">
+                    <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
+                        <div class="trend-image">
+                            <img src="assets/images/trending/trending10.jpg" alt="image">
+                        </div>
+                        <div class="trend-content-main p-4 pb-2">
+                            <div class="trend-content">
+                                <h5 class="theme mb-1">Wisata Alam</h5>
+                                <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
+                                <p class="mb-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                </p>
+                                <div class="entry-meta d-flex align-items-center justify-content-between">
+                                    <div class="entry-author mb-2">
+                                        <img src="assets/images/reviewer/2.jpg" alt="" class="rounded-circle me-1">
+                                        <span>Sollmond Nell</span>
+                                    </div>
                                 </div>
-                                <span class="white bg-theme p-1 px-2 rounded">18 Tours</span>
                             </div>
-                            <div class="color-overlay"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination14.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Tokyo</a></h5>
-                                    <h3 class="mb-0 white">Japan</h3>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
+                        <div class="trend-image">
+                            <img src="assets/images/trending/trending12.jpg" alt="image">
+                        </div>
+                        <div class="trend-content-main p-4 pb-2">
+                            <div class="trend-content">
+                                <h5 class="theme mb-1">Wisata Sejarah</h5>
+                                <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
+                                <p class="mb-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                </p>
+                                <div class="entry-meta d-flex align-items-center justify-content-between">
+                                    <div class="entry-author mb-2">
+                                        <img src="assets/images/reviewer/1.jpg" alt="" class="rounded-circle me-1">
+                                        <span>David Scott</span>
+                                    </div>
                                 </div>
-                                <span class="white bg-theme p-1 px-2 rounded">21 Tours</span>
                             </div>
-                            <div class="color-overlay"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination15.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Moscow</a></h5>
-                                    <h3 class="mb-0 white">Russia</h3>
-                                </div>
-                                <span class="white bg-theme p-1 px-2 rounded">15 Tours</span>
-                            </div>
-                            <div class="color-overlay"></div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
+                        <div class="trend-image">
+                            <img src="assets/images/trending/trending13.jpg" alt="image">
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination5.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Bangkok</a></h5>
-                                    <h3 class="mb-0 white">Thailand</h3>
+                        <div class="trend-content-main p-4 pb-2">
+                            <div class="trend-content">
+                                <h5 class="theme mb-1">Wisata Budaya</h5>
+                                <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
+                                <p class="mb-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                </p>
+                                <div class="entry-meta d-flex align-items-center justify-content-between">
+                                    <div class="entry-author mb-2">
+                                        <img src="assets/images/reviewer/3.jpg" alt="" class="rounded-circle me-1">
+                                        <span>John Bolden</span>
+                                    </div>
                                 </div>
-                                <span class="white bg-theme p-1 px-2 rounded">24 Tours</span>
                             </div>
-                            <div class="color-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination16.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Florida</a></h5>
-                                    <h3 class="mb-0 white">America</h3>
-                                </div>
-                                <span class="white bg-theme p-1 px-2 rounded">32 Tours</span>
-                            </div>
-                            <div class="color-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination4.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Bali</a></h5>
-                                    <h3 class="mb-0 white">Indonesia</h3>
-                                </div>
-                                <span class="white bg-theme p-1 px-2 rounded">14 Tours</span>
-                            </div>
-                            <div class="color-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination10.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Italy</a></h5>
-                                    <h3 class="mb-0 white">Caspian Valley</h3>
-                                </div>
-                                <span class="white bg-theme p-1 px-2 rounded">18 Tours</span>
-                            </div>
-                            <div class="color-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination11.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Tokyo</a></h5>
-                                    <h3 class="mb-0 white">Japan</h3>
-                                </div>
-                                <span class="white bg-theme p-1 px-2 rounded">21 Tours</span>
-                            </div>
-                            <div class="color-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination7.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="destination_detail.php" class="theme1">Moscow</a></h5>
-                                    <h3 class="mb-0 white">Russia</h3>
-                                </div>
-                                <span class="white bg-theme p-1 px-2 rounded">15 Tours</span>
-                            </div>
-                            <div class="color-overlay"></div>
                         </div>
                     </div>
                 </div>
@@ -183,50 +114,6 @@ include_once("./layouts-landing/head.php");
         </div>
     </section>
     <!-- top Destination ends -->
-
-    <!-- partner starts -->
-    <section class="our-partner pb-6 pt-6">
-        <div class="container">
-            <div class="section-title mb-6 w-75 mx-auto text-center">
-                <h4 class="mb-1 theme1">Our Partners</h4>
-                <h2 class="mb-1">Our Awesome <span class="theme">partners</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-            <div class="row align-items-center partner-in partner-slider">
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-5.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-2.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-3.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-4.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-5.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- partner ends -->
 
 
     <?php

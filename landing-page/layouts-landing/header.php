@@ -5,19 +5,17 @@
            <div class="container d-flex align-items-center justify-content-between">
                <div class="links">
                    <ul>
-                       <li><a href="#" class="white"><i class="icon-calendar white"></i> Thursday, Mar 26, 2021</a>
+                       <li><a href="#" class="white"><i class="icon-calendar white"></i> <?php echo date('l, d-m-Y'); ?></a> 
                        </li>
-                       <li><a href="#" class="white"><i class="icon-location-pin white"></i> Hollywood, America</a>
-                       </li>
-                       <li><a href="#" class="white"><i class="icon-clock white"></i> Mon-Fri: 10 AM – 5 PM</a></li>
+                       <li><a href="#" class="white"><i class="icon-location-pin white"></i> Jakarta, Indonesia</a>
+                       </li>                       
                    </ul>
                </div>
                <div class="links float-right">
                    <ul>
                        <li><a href="#" class="white"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                       <li><a href="#" class="white"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                       <li><a href="#" class="white"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                        <li><a href="#" class="white"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                       <li><a href="#" class="white"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
                    </ul>
                </div>
            </div>
@@ -40,22 +38,14 @@
                                    <a href="index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <i class="icon-arrow-down" aria-hidden="true"></i></a>
                                </li>
 
-                               <li><a href="about.php">About Us</a></li>
+                               <li><a href="about.php">Tentang Kami</a></li>
 
                                <li class="submenu dropdown">
-                                   <a href="destinasi.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Destinations <i class="icon-arrow-down" aria-hidden="true"></i></a>
+                                   <a href="destinasi.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wisata <i class="icon-arrow-down" aria-hidden="true"></i></a>
                                </li>
-                               <li><a href="gallery.php">Gallery</a></li>
-                               <li class="search-main"><a href="#search1" class="mt_search"><i class="fa fa-search"></i></a></li>
+                               <li><a href="gallery.php">Galeri</a></li>
                            </ul>
-                       </div><!-- /.navbar-collapse -->
-                       <div class="register-login d-flex align-items-center">
-                           <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="me-3">
-                               <i class="icon-user"></i> Login/Register
-                           </a>
-                           <a href="#" class="nir-btn white">Book Now</a>
                        </div>
-
                        <div id="slicknav-mobile"></div>
                    </div>
                </div><!-- /.container-fluid -->

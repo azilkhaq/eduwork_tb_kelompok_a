@@ -21,11 +21,11 @@ include_once("./layouts-landing/head.php");
         <div class="breadcrumb-outer">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="mb-3">Gallery One</h1>
+                    <h1 class="mb-3">Galeri</h1>
                     <nav aria-label="breadcrumb" class="d-block">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Gallery One</li>
+                            <li class="breadcrumb-item active" aria-current="page">Galeri</li>
                         </ul>
                     </nav>
                 </div>
@@ -39,9 +39,7 @@ include_once("./layouts-landing/head.php");
     <div class="gallery pt-6 pb-0">
         <div class="container">
             <div class="section-title mb-6 text-center w-75 mx-auto">
-                <h4 class="mb-1 theme1">Our Gallery</h4>
-                <h2 class="mb-1">Some Beautiful <span class="theme">Snapshoots</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <h2 class="mb-1">Galeri <span class="theme">Wisata</span></h2>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -180,50 +178,6 @@ include_once("./layouts-landing/head.php");
         </div>
     </div>
     <!-- Gallery Ends -->
-
-    <!-- partner starts -->
-    <section class="our-partner pb-6 pt-6">
-        <div class="container">
-            <div class="section-title mb-6 w-75 mx-auto text-center">
-                <h4 class="mb-1 theme1">Our Partners</h4>
-                <h2 class="mb-1">Our Awesome <span class="theme">partners</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-            <div class="row align-items-center partner-in partner-slider">
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-5.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-2.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-3.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-4.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-5.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- partner ends -->
 
     <?php
     include_once("./layouts-landing/footer.php");

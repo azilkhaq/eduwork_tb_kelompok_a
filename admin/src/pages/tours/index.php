@@ -1,3 +1,5 @@
+
+
 <?php include_once "../../layouts/head.php" ?>
 
 <body data-layout="detached" data-topbar="colored">
