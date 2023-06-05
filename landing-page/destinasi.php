@@ -45,7 +45,7 @@ include_once("./layouts-landing/head.php");
                 <div class="col-lg-4">
                     <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
                         <div class="trend-image">
-                            <img src="assets/images/trending/trending10.jpg" alt="image">
+                            <img src="assets/images/trending/borbudur.jpg" alt="image">
                         </div>
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
@@ -68,7 +68,7 @@ include_once("./layouts-landing/head.php");
                 <div class="col-lg-4 col-md-6">
                     <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
                         <div class="trend-image">
-                            <img src="assets/images/trending/trending12.jpg" alt="image">
+                            <img src="assets/images/trending/pasar-lama.jpg" alt="image">
                         </div>
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
@@ -91,7 +91,7 @@ include_once("./layouts-landing/head.php");
                 <div class="col-lg-4 col-md-6">
                     <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
                         <div class="trend-image">
-                            <img src="assets/images/trending/trending13.jpg" alt="image">
+                            <img src="assets/images/trending/tirta-angga.jpg" alt="image">
                         </div>
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
