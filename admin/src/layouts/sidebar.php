@@ -29,7 +29,7 @@
                 <li>
                     <a href="calendar.html" class="waves-effect">
                         <i class="mdi mdi-file-tree"></i>
-                        <span>Kategoroi</span>
+                        <span>Kategori</span>
                     </a>
                 </li>
                 <li>
