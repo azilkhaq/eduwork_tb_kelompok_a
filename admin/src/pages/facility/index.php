@@ -54,28 +54,30 @@
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Facility Name</th>
-                                                <th>Tour id</th>
+                                                <th>Nama Fasilitas</th>
+                                                <th>Wisata</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php
-                                            include ('./connection.php');
-                                            $query = mysqli_query($koneksi, "SELECT * FROM facilities");
-                                            while($data = mysqli_fetch_array($query)){
-                                        ?>
-                                        <tr>
-            <td class="text-center"><?php echo $data['id'] ?></td>
-            <td class="text-center"><?php echo $data['facility_name'] ?></td>
-            <td class="text-center"><?php echo $data['tour_id'] ?></td>
-            <td class="text-center">
-            <a  class="btn btn-warning" href="edit.php?id=<?= $data['id']; ?>">Edit</a>
-            <a  class="btn btn-danger" href="delete.php?id=<?= $data['id']; ?> " onclick="return confirm('Yakin dihapus')">Delete</a>
-        </tr>
-        <?php 
-            } 
-        ?>
+                                            <?php
+                                            $i = 0;
+                                            include('./connection.php');
+                                            $query = mysqli_query($koneksi, "SELECT * FROM facilities LEFT JOIN tours ON facilities.tour_id = tours.id");
+                                            while ($data = mysqli_fetch_array($query)) {
+                                            $i++;
+                                            ?>
+                                                <tr>
+                                                    <td><?php echo $i ?></td>
+                                                    <td><?php echo $data['facility_name'] ?></td>
+                                                    <td><?php echo $data['name'] ?></td>
+                                                    <td>
+                                                        <a class="btn btn-warning" href="edit.php?id=<?= $data['id']; ?>">Edit</a>
+                                                        <a class="btn btn-danger" href="delete.php?id=<?= $data['id']; ?> " onclick="return confirm('Yakin dihapus')">Delete</a>
+                                                </tr>
+                                            <?php
+                                            }
+                                            ?>
                                         </tbody>
                                     </table>
 
@@ -92,11 +94,10 @@
         </div>
     </div>
     <script type="text/javascript">
-    $(document).ready(function(){
-        $('#mytable').DataTable();
-
-    });
-</script>
+        $(document).ready(function() {
+            $('#mytable').DataTable();
+        });
+    </script>
 
     <?php include_once "../../layouts/script.php" ?>
 </body>

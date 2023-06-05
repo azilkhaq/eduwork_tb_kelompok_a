@@ -1,3 +1,8 @@
+<?php
+include('connection.php');
+$query = mysqli_query($koneksi, "SELECT * FROM tours");
+?>
+
 <?php include_once "../../layouts/head.php" ?>
 
 <body data-layout="detached" data-topbar="colored">
@@ -21,12 +26,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-flex align-items-center justify-content-between">
-                                <h4 class="page-title mb-0 font-size-18">Add Facility</h4>
+                                <h4 class="page-title mb-0 font-size-18">Tambah Fasilitas</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Facility</a></li>
-                                        <li class="breadcrumb-item active">Add Facility</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Fasilitas</a></li>
+                                        <li class="breadcrumb-item active">Tambah Fasilitas</li>
                                     </ol>
                                 </div>
 
@@ -40,26 +45,32 @@
                             <div class="card">
                                 <div class="card-body">
 
-                                    <h4 class="card-title">Add Data</h4>
-                                       
+                                    <h4 class="card-title pb-4">Form Tambah Fasilitas</h4>
+
                                     <form id="myForm" action="process_add.php" method="POST">
-                                    <div class="mb-3 row">
-                                        <label for="example-text-input" class="col-md-2 col-form-label">Facility Name</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" type="text" id="example-text-input">
+                                        <div class="mb-3 row">
+                                            <label for="example-text-input" class="col-md-2 col-form-label">Nama Fasilitas</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" name="facility_name">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <label class="col-md-2 col-form-label">Tour ID</label>
-                                        <div class="col-md-10">
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Select</option>
-                                                <option>Large select</option>
-                                                <option>Small select</option>
-                                            </select>
+                                        <div class="mb-3 row">
+                                            <label class="col-md-2 col-form-label">Wisata</label>
+                                            <div class="col-md-10">
+                                                <select class="form-select" aria-label="Default select example" name="tour">
+                                                    <option value="">Pilih Wisata</option>
+                                                    <?php if (mysqli_num_rows($query) > 0) { ?>
+                                                        <?php
+                                                        while ($data = mysqli_fetch_array($query)) {
+                                                        ?>
+                                                            <option value="<?= $data['id'] ?>"><?= $data['name'] ?></option>
+                                                        <?php
+                                                        } ?>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <button type="button" class="btn btn-primary waves-effect waves-light">Tambah</button>
+                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Tambah</button>
                                 </div>
                             </div>
                         </div>
