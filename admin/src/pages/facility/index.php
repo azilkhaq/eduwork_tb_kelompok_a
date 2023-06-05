@@ -63,7 +63,7 @@
                                             <?php
                                             $i = 0;
                                             include('./connection.php');
-                                            $query = mysqli_query($koneksi, "SELECT * FROM facilities LEFT JOIN tours ON facilities.tour_id = tours.id");
+                                            $query = mysqli_query($koneksi, "SELECT *,facilities.id as id_facilities FROM facilities LEFT JOIN tours ON facilities.tour_id = tours.id");
                                             while ($data = mysqli_fetch_array($query)) {
                                             $i++;
                                             ?>
@@ -72,8 +72,8 @@
                                                     <td><?php echo $data['facility_name'] ?></td>
                                                     <td><?php echo $data['name'] ?></td>
                                                     <td>
-                                                        <a class="btn btn-warning" href="edit.php?id=<?= $data['id']; ?>">Edit</a>
-                                                        <a class="btn btn-danger" href="delete.php?id=<?= $data['id']; ?> " onclick="return confirm('Yakin dihapus')">Delete</a>
+                                                        <a class="btn btn-warning" href="edit.php?id=<?= $data['id_facilities']; ?>">Edit</a>
+                                                        <a class="btn btn-danger" href="delete.php?id=<?= $data['id_facilities']; ?> " onclick="return confirm('Yakin dihapus')">Delete</a>
                                                 </tr>
                                             <?php
                                             }

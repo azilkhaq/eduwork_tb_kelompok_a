@@ -1,6 +1,6 @@
 <?php
 
-include_once("connection.php");
+include ('connection.php');
 $id = $_GET["id"];
 
 $facility_name = $_POST['facility_name'];
