@@ -23,19 +23,19 @@
                 <li>
                     <a href="../tours" class="waves-effect">
                         <i class="mdi mdi-airplane"></i>
-                        <span>Tour</span>
+                        <span>Wisata</span>
                     </a>
                 </li>
                 <li>
                     <a href="calendar.html" class="waves-effect">
                         <i class="mdi mdi-file-tree"></i>
-                        <span>Category</span>
+                        <span>Kategoroi</span>
                     </a>
                 </li>
                 <li>
                     <a href="../facility" class="waves-effect">
                         <i class="mdi mdi-checkbox-multiple-blank-outline"></i>
-                        <span>Facility</span>
+                        <span>Fasilitas</span>
                     </a>
                 </li>
             </ul>
