@@ -68,27 +68,6 @@ include_once("./layouts-landing/head.php");
                                 <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
                                 <p class="mb-0">The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
                             </div>
-
-                            <div class="description d-md-flex">
-                                <div class="desc-box bg-grey p-4 rounded me-md-2 mb-2">
-                                    <h5 class="mb-2">Price Includes</h5>
-                                    <ul>
-                                        <li class="d-block pb-1"><i class="fa fa-check pink mr-1"></i> Air Fares</li>
-                                        <li class="d-block pb-1"><i class="fa fa-check pink mr-1"></i> 3 Nights Hotel Accomodation</li>
-                                        <li class="d-block pb-1"><i class="fa fa-check pink mr-1"></i> Tour Guide</li>
-                                        <li class="d-block"><i class="fa fa-check pink mr-1"></i> Entrance Fees</li>
-                                    </ul>
-                                </div>
-                                <div class="desc-box bg-grey p-4 rounded ms-md-2 mb-2">
-                                    <h4 class="mb-2">Departure & Return Location</h4>
-                                    <ul>
-                                        <li class="d-block pb-1"><i class="fa fa-close pink mr-1"></i> Guide Service Fee</li>
-                                        <li class="d-block pb-1"><i class="fa fa-close pink mr-1"></i> Driver Service Fee</li>
-                                        <li class="d-block pb-1"><i class="fa fa-close pink mr-1"></i> Any Private Expenses</li>
-                                        <li class="d-block"><i class="fa fa-close pink mr-1"></i> Room Service Fees</li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="description mb-2">
@@ -107,64 +86,6 @@ include_once("./layouts-landing/head.php");
                                 </div>
                             </div>
                         </div>
-
-                        <div id="single-review" class="single-review mb-4">
-                            <h4>Average Reviews</h4>
-                            <div class="row d-flex align-items-center">
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="review-box bg-title text-center py-4 p-2 rounded">
-                                        <h2 class="mb-1 white"><span>2.2</span>/5</h2>
-                                        <h4 class="white mb-1">"Feel so much worst than thinking"</h4>
-                                        <p class="mb-0 white font-italic">From 40 Reviews</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="review-progress">
-                                        <div class="progress-item mb-1">
-                                            <p class="mb-0">Cleanliness</p>
-                                            <div class="progress rounded">
-                                                <div class="progress-bar bg-theme" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-                                                    <span class="sr-only">40% Complete</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item mb-1">
-                                            <p class="mb-0">Facilities</p>
-                                            <div class="progress rounded">
-                                                <div class="progress-bar bg-theme" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
-                                                    <span class="sr-only">30% Complete</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item mb-1">
-                                            <p class="mb-0">Value for money</p>
-                                            <div class="progress rounded">
-                                                <div class="progress-bar bg-theme" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item mb-1">
-                                            <p class="mb-0">Service</p>
-                                            <div class="progress rounded">
-                                                <div class="progress-bar bg-theme" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
-                                                    <span class="sr-only">20% Complete</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <p class="mb-0">Location</p>
-                                            <div class="progress rounded">
-                                                <div class="progress-bar bg-theme" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:45%">
-                                                    <span class="sr-only">45% Complete</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
 
                         <!-- blog review -->
                         <div id="single-add-review" class="single-add-review">
@@ -200,63 +121,122 @@ include_once("./layouts-landing/head.php");
                 <!-- sidebar starts -->
                 <div class="col-lg-4">
                     <div class="sidebar-sticky">
-                        <div class="list-sidebar">
-                            <div class="author-news mb-4 border-all box-shadow p-5 text-center rounded">
-                                <div class="author-news-content">
-                                    <div class="author-thumb mb-1">
-                                        <img src="assets/images/team/img2.jpg" alt="author">
-                                    </div>
-                                    <div class="author-content">
-                                        <h3 class="title mb-1"><a href="#">Relson Dulux</a></h3>
-                                        <p class="mb-2">Hello, We’re content writer who is fascinated by content fashion, celebrity and lifestyle. We helps clients bring the right content to the right people.</p>
-                                        <div class="header-social">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f rounded"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google-plus-g rounded"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter rounded"></i></a></li>
-                                            </ul>
+                        <div class="popular-post sidebar-item mb-4">
+                            <div class="sidebar-tabs">
+                                <div class="post-tabs">
+                                    <!-- tab navs -->
+                                    <h4 class="">Destinations Popular</h4>
+                                    <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab1" role="tablist">
+                                        <li class="nav-item d-inline-block" role="presentation">
+                                            <button aria-selected="false" class="nav-link active" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab" type="button">Popular</button>
+                                        </li>
+                                        <li class="nav-item d-inline-block" role="presentation">
+                                            <button aria-selected="true" class="nav-link" data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab" role="tab" type="button">Recent</button>
+                                        </li>
+                                    </ul>
+                                    <!-- tab contents -->
+                                    <div class="tab-content" id="postsTabContent1">
+                                        <!-- popular posts -->
+                                        <div aria-labelledby="popular-tab" class="tab-pane fade active show" id="popular" role="tabpanel">
+                                            <article class="post mb-2 border-b pb-2">
+                                                <div class="s-content d-flex align-items-center justify-space-between">
+                                                    <div class="sidebar-image w-25 me-3 rounded">
+                                                        <a href="detail-1.html"><img src="assets/images/trending/trending1.jpg" alt=""></a>
+                                                    </div>
+                                                    <div class="content-list w-75">
+                                                        <h5 class="mb-1"><a href="detail-1.html">An Incredibly Easy Method That Works For All</a></h5>
+                                                        <div class="date">10 Apr 2021</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <article class="post border-b pb-2 mb-2">
+                                                <div class="s-content d-flex align-items-center justify-space-between">
+                                                    <div class="sidebar-image w-25 me-3 rounded">
+                                                        <a href="detail-1.html"><img src="assets/images/trending/trending2.jpg" alt=""></a>
+                                                    </div>
+                                                    <div class="content-list w-75">
+                                                        <h5 class="mb-1"><a href="detail-1.html">15 Unheard Ways To Achieve Greater Walker</a></h5>
+                                                        <div class="date">29 Mar 2021</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <article class="post mb-2 border-b pb-2">
+                                                <div class="s-content d-flex align-items-center justify-space-between">
+                                                    <div class="sidebar-image w-25 me-3 rounded">
+                                                        <a href="detail-1.html"><img src="assets/images/trending/trending1.jpg" alt=""></a>
+                                                    </div>
+                                                    <div class="content-list w-75">
+                                                        <h5 class="mb-1"><a href="detail-1.html">An Incredibly Easy Method That Works For All</a></h5>
+                                                        <div class="date">10 Apr 2021</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <article class="post">
+                                                <div class="s-content d-flex align-items-center justify-space-between">
+                                                    <div class="sidebar-image w-25 me-3 rounded">
+                                                        <a href="detail-1.html"><img src="assets/images/trending/trending4.jpg" alt=""></a>
+                                                    </div>
+                                                    <div class="content-list w-75">
+                                                        <h5 class="mb-1"><a href="detail-1.html">15 Unheard Ways To Achieve Greater Walker</a></h5>
+                                                        <div class="date">21 Feb 2021</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- Recent posts -->
+                                        <div aria-labelledby="recent-tab" class="tab-pane fade" id="recent" role="tabpanel">
+                                            <article class="post mb-2 border-b pb-2">
+                                                <div class="s-content d-flex align-items-center justify-space-between">
+                                                    <div class="sidebar-image w-25 me-3 rounded">
+                                                        <a href="detail-1.html"><img src="assets/images/trending/trending5.jpg" alt=""></a>
+                                                    </div>
+                                                    <div class="content-list w-75">
+                                                        <h5 class="mb-1"><a href="detail-1.html">10 Ways To Immediately Start Selling Furniture</a></h5>
+                                                        <div class="date">08 Mar 2021</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <article class="post border-b pb-2 mb-2">
+                                                <div class="s-content d-flex align-items-center justify-space-between">
+                                                    <div class="sidebar-image w-25 me-3 rounded">
+                                                        <a href="detail-1.html"><img src="assets/images/trending/trending6.jpg" alt=""></a>
+                                                    </div>
+                                                    <div class="content-list w-75">
+                                                        <h5 class="mb-1"><a href="detail-1.html">Photography Photo modify and Beautiful Walker</a></h5>
+                                                        <div class="date">18 Jan 2021</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <article class="post mb-2 border-b pb-2">
+                                                <div class="s-content d-flex align-items-center justify-space-between">
+                                                    <div class="sidebar-image w-25 me-3 rounded">
+                                                        <a href="detail-1.html"><img src="assets/images/trending/trending1.jpg" alt=""></a>
+                                                    </div>
+                                                    <div class="content-list w-75">
+                                                        <h5 class="mb-1"><a href="detail-1.html">An Incredibly Easy Method That Works For All</a></h5>
+                                                        <div class="date">10 Apr 2021</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <article class="post">
+                                                <div class="s-content d-flex align-items-center justify-space-between">
+                                                    <div class="sidebar-image w-25 me-3 rounded">
+                                                        <a href="detail-1.html"><img src="assets/images/trending/trending3.jpg" alt=""></a>
+                                                    </div>
+                                                    <div class="content-list w-75">
+                                                        <h5 class="mb-1"><a href="detail-1.html">1Certified Graphic Design with Free Project Course</a></h5>
+                                                        <div class="date">12 Feb 2021</div>
+                                                    </div>
+                                                </div>
+                                            </article>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="sidebar-item mb-4">
-                                <h4 class="">All Categories</h4>
-                                <ul class="sidebar-category">
-                                    <li><a href="#">Travelling</a></li>
-                                    <li><a href="#">Tour Position</a></li>
-                                    <li><a href="#">Trip Landmark</a></li>
-                                    <li class="active"><a href="#">Adventurous</a></li>
-                                    <li><a href="#">Address and Map</a></li>
-                                    <li><a href="#">Booking Requests</a></li>
-                                    <li><a href="#">Wildlife Reservation</a></li>
-                                    <li><a href="#">Top Destination</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sidebar-item mb-4">
-                                <h4 class="">Tags</h4>
-                                <ul class="sidebar-tags">
-                                    <li><a href="#">Tour</a></li>
-                                    <li><a href="#">Rental</a></li>
-                                    <li><a href="#">City</a></li>
-                                    <li><a href="#">Yatch</a></li>
-                                    <li><a href="#">Activity</a></li>
-                                    <li><a href="#">Museum</a></li>
-                                    <li><a href="#">Beauty</a></li>
-                                    <li><a href="#">Classic</a></li>
-                                    <li><a href="#">Creative</a></li>
-                                    <li><a href="#">Designs</a></li>
-                                    <li><a href="#">Featured</a></li>
-                                    <li><a href="#">Free Style</a></li>
-                                    <li><a href="#">Programs</a></li>
-                                    <li><a href="#">Travel</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="sidebar-item mb-4">
-                                <div class="sidebar-image rounded overflow-hidden">
-                                    <img src="assets/images/destination/destination4.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -266,50 +246,6 @@ include_once("./layouts-landing/head.php");
         </div>
     </section>
     <!-- top Destination ends -->
-
-    <!-- partner starts -->
-    <section class="our-partner pb-6 pt-6">
-        <div class="container">
-            <div class="section-title mb-6 w-75 mx-auto text-center">
-                <h4 class="mb-1 theme1">Our Partners</h4>
-                <h2 class="mb-1">Our Awesome <span class="theme">partners</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-            <div class="row align-items-center partner-in partner-slider">
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-5.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-2.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-3.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-4.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-5.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- partner ends -->
 
     <?php
     include_once("./layouts-landing/footer.php");

@@ -26,7 +26,7 @@ include_once("./layouts-landing/head.php");
                             <h1>Start Planning Your Dream Trip Today!</h1>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore</p>
-                           
+
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4">
@@ -167,104 +167,7 @@ include_once("./layouts-landing/head.php");
     </section>
     <!-- about-us ends -->
 
-    <!-- top Destination starts -->
-    <section class="trending pb-5 pt-0">
-        <div class="container">
-            <div class="section-title mb-6 w-50 mx-auto text-center">
-                <h4 class="mb-1 theme1">Top Destinations</h4>
-                <h2 class="mb-1">Explore <span class="theme">Top Destinations</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                </p>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-4">
-                    <div class="trend-item1">
-                        <div class="trend-image position-relative rounded">
-                            <img src="assets/images/destination/destination1.jpg" alt="image">
-                            <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                <div class="trend-content-title">
-                                    <h5 class="mb-0"><a href="tour-grid.html" class="theme1">England</a></h5>
-                                    <h3 class="mb-0 white">London</h3>
-                                </div>
-                                <span class="white bg-theme p-1 px-2 rounded">15 Tours</span>
-                            </div>
-                            <div class="color-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 mb-4">
-                            <div class="trend-item1">
-                                <div class="trend-image position-relative rounded">
-                                    <img src="assets/images/destination/destination17.jpg" alt="image">
-                                    <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                        <div class="trend-content-title">
-                                            <h5 class="mb-0"><a href="tour-grid.html" class="theme1">Italy</a>
-                                            </h5>
-                                            <h3 class="mb-0 white">Caspian Valley</h3>
-                                        </div>
-                                        <span class="white bg-theme p-1 px-2 rounded">18 Tours</span>
-                                    </div>
-                                    <div class="color-overlay"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 mb-4">
-                            <div class="trend-item1">
-                                <div class="trend-image position-relative rounded">
-                                    <img src="assets/images/destination/destination14.jpg" alt="image">
-                                    <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                        <div class="trend-content-title">
-                                            <h5 class="mb-0"><a href="tour-grid.html" class="theme1">Tokyo</a>
-                                            </h5>
-                                            <h3 class="mb-0 white">Japan</h3>
-                                        </div>
-                                        <span class="white bg-theme p-1 px-2 rounded">21 Tours</span>
-                                    </div>
-                                    <div class="color-overlay"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 mb-4">
-                            <div class="trend-item1">
-                                <div class="trend-image position-relative rounded">
-                                    <img src="assets/images/destination/destination15.jpg" alt="image">
-                                    <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100">
-                                        <div class="trend-content-title">
-                                            <h5 class="mb-0"><a href="tour-grid.html" class="theme1">Moscow</a>
-                                            </h5>
-                                            <h3 class="mb-0 white">Russia</h3>
-                                        </div>
-                                        <span class="white bg-theme p-1 px-2 rounded">15 Tours</span>
-                                    </div>
-                                    <div class="color-overlay"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 mb-4">
-                            <div class="trend-item1">
-                                <div class="trend-image position-relative rounded">
-                                    <img src="assets/images/destination/destination16.jpg" alt="image">
-                                    <div class="trend-content d-flex align-items-center justify-content-between position-absolute bottom-0 p-4 w-100 z-index">
-                                        <div class="trend-content-title">
-                                            <h5 class="mb-0"><a href="tour-grid.html" class="theme1">Florida</a>
-                                            </h5>
-                                            <h3 class="mb-0 white">America</h3>
-                                        </div>
-                                        <span class="white bg-theme p-1 px-2 rounded">32 Tours</span>
-                                    </div>
-                                    <div class="color-overlay"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-    <!-- top Destination ends -->
 
     <!-- about-us starts -->
     <section class="about-us pt-0" style="background-image:url(assets/images/bg/bg-trans.png);">
@@ -354,8 +257,8 @@ include_once("./layouts-landing/head.php");
             <div class="row align-items-center justify-content-between mb-6 ">
                 <div class="col-lg-7">
                     <div class="section-title text-center text-lg-start">
-                        <h4 class="mb-1 theme1">Top Pick</h4>
-                        <h2 class="mb-1">Best <span class="theme">Tour Packages</span></h2>
+                        <h4 class="mb-1 theme1">Wisata Populer</h4>
+                        <h2 class="mb-1">Wisata <span class="theme">Pilihan </span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore.</p>
                     </div>
@@ -395,7 +298,7 @@ include_once("./layouts-landing/head.php");
                                     esse cillum</p>
                                 <div class="entry-meta">
                                     <div class="entry-author d-flex align-items-center">
-                                        <p class="mb-0"><span class="theme fw-bold fs-5"> $170.00</span> | Per person
+                                        <p class="mb-0"><span class="theme fw-bold fs-5"> Selengkapnya</span>
                                         </p>
                                     </div>
                                 </div>
@@ -518,425 +421,6 @@ include_once("./layouts-landing/head.php");
         </div>
     </section>
     <!-- best tour Ends -->
-
-    <!-- Last Minute Deal Starts -->
-    <section class="trending pb-0 pt-6" style="background-image: url(assets/images/shape2.png);">
-        <div class="container">
-            <div class="section-title mb-6 w-75 mx-auto text-center">
-                <h4 class="mb-1 theme1">Top Deals</h4>
-                <h2 class="mb-1">The Last <span class="theme">Minute Deals</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                </p>
-            </div>
-            <div class="trend-box">
-                <div class="row">
-                    <div class="col-lg-5 mb-4">
-                        <div class="trend-item1 rounded box-shadow mb-4">
-                            <div class="trend-image position-relative">
-                                <img src="assets/images/trending/trendingb-2.jpg" alt="image" class="">
-                                <div class="trend-content1 p-4">
-                                    <h5 class="theme1 mb-1"><i class="flaticon-location-pin"></i> Norway</h5>
-                                    <h3 class="mb-1 white"><a href="tour-grid.html" class="white">Norway Lake</a>
-                                    </h3>
-                                    <div class="rating-main d-flex align-items-center pb-2">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ms-2 white">(16)</span>
-                                    </div>
-                                    <div class="entry-meta d-flex align-items-center justify-content-between">
-                                        <div class="entry-author d-flex align-items-center">
-                                            <p class="mb-0 white"><span class="theme1 fw-bold fs-5"> $180.00</span> |
-                                                Per person</p>
-                                        </div>
-                                        <div class="entry-author">
-                                            <i class="icon-calendar white"></i>
-                                            <span class="fw-bold white"> 6 Days Tours</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                        <div class="trend-item1 rounded box-shadow mb-4">
-                            <div class="trend-image position-relative">
-                                <img src="assets/images/trending/trending-large.jpg" alt="image" class="">
-                                <div class="trend-content1 p-4">
-                                    <h5 class="theme1 mb-1"><i class="flaticon-location-pin"></i> Egpyt</h5>
-                                    <h3 class="mb-1 white"><a href="tour-grid.html" class="white">Pyramid Land</a>
-                                    </h3>
-                                    <div class="rating-main d-flex align-items-center pb-2">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ms-2 white">(16)</span>
-                                    </div>
-                                    <div class="entry-meta d-flex align-items-center justify-content-between">
-                                        <div class="entry-author d-flex align-items-center">
-                                            <p class="mb-0 white"><span class="theme1 fw-bold fs-5"> $180.00</span> |
-                                                Per person</p>
-                                        </div>
-                                        <div class="entry-author">
-                                            <i class="icon-calendar white"></i>
-                                            <span class="fw-bold white"> 6 Days Tours</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                        <div class="trend-item1 rounded box-shadow">
-                            <div class="trend-image position-relative">
-                                <img src="assets/images/trending/trendingb-1.jpg" alt="image" class="">
-                                <div class="trend-content1 p-4">
-                                    <h5 class="theme1 mb-1"><i class="flaticon-location-pin"></i> Usa</h5>
-                                    <h3 class="mb-1 white"><a href="tour-grid.html" class="white">New York
-                                            City</a></h3>
-                                    <div class="rating-main d-flex align-items-center pb-2">
-                                        <div class="rating">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                        </div>
-                                        <span class="ms-2 white">(12)</span>
-                                    </div>
-                                    <div class="entry-meta d-flex align-items-center justify-content-between">
-                                        <div class="entry-author d-flex align-items-center">
-                                            <p class="mb-0 white"><span class="theme1 fw-bold fs-5"> $140.00</span> |
-                                                Per person</p>
-                                        </div>
-                                        <div class="entry-author">
-                                            <i class="icon-calendar white"></i>
-                                            <span class="fw-bold white"> 3 Days Tours</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 mb-4">
-                                <div class="trend-item rounded box-shadow">
-                                    <div class="trend-image position-relative">
-                                        <img src="assets/images/trending/trending1.jpg" alt="image" class="">
-                                        <div class="color-overlay"></div>
-                                    </div>
-                                    <div class="trend-content p-4 pt-5 position-relative bg-white">
-                                        <div class="trend-meta bg-theme white px-3 py-2 rounded">
-                                            <div class="entry-author">
-                                                <i class="icon-calendar"></i>
-                                                <span class="fw-bold"> 4 Days Tours</span>
-                                            </div>
-                                        </div>
-                                        <h5 class="theme mb-1"><i class="flaticon-location-pin"></i> Spain</h5>
-                                        <h3 class="mb-1"><a href="tour-grid.html">Barcelona city beach</a></h3>
-                                        <div class="rating-main d-flex align-items-center pb-2">
-                                            <div class="rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                            <span class="ms-2">(21)</span>
-                                        </div>
-                                        <p class=" border-b pb-2 mb-2">Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse cillum</p>
-                                        <div class="entry-meta">
-                                            <div class="entry-author d-flex align-items-center">
-                                                <p class="mb-0"><span class="theme fw-bold fs-5"> $220.00</span> | Per
-                                                    person</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 mb-4">
-                                <div class="trend-item rounded box-shadow">
-                                    <div class="trend-image position-relative">
-                                        <img src="assets/images/trending/trending2.jpg" alt="image" class="">
-                                        <div class="color-overlay"></div>
-                                    </div>
-                                    <div class="trend-content p-4 pt-5 position-relative bg-white">
-                                        <div class="trend-meta bg-theme white px-3 py-2 rounded">
-                                            <div class="entry-author">
-                                                <i class="icon-calendar"></i>
-                                                <span class="fw-bold"> 7 Days Tours</span>
-                                            </div>
-                                        </div>
-                                        <h5 class="theme mb-1"><i class="flaticon-location-pin"></i> Indonesia</h5>
-                                        <h3 class="mb-1"><a href="tour-grid.html">Bali Province</a></h3>
-                                        <div class="rating-main d-flex align-items-center pb-2">
-                                            <div class="rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                            <span class="ms-2">(11)</span>
-                                        </div>
-                                        <p class=" border-b pb-2 mb-2">Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse cillum</p>
-                                        <div class="entry-meta">
-                                            <div class="entry-author d-flex align-items-center">
-                                                <p class="mb-0"><span class="theme fw-bold fs-5"> $210.00</span> | Per
-                                                    person</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 mb-4">
-                                <div class="trend-item rounded box-shadow">
-                                    <div class="trend-image position-relative">
-                                        <img src="assets/images/trending/trending3.jpg" alt="image" class="">
-                                        <div class="color-overlay"></div>
-                                    </div>
-                                    <div class="trend-content p-4 pt-5 position-relative bg-white">
-                                        <div class="trend-meta bg-theme white px-3 py-2 rounded">
-                                            <div class="entry-author">
-                                                <i class="icon-calendar"></i>
-                                                <span class="fw-bold"> 3 Days Tours</span>
-                                            </div>
-                                        </div>
-                                        <h5 class="theme mb-1"><i class="flaticon-location-pin"></i> Russia</h5>
-                                        <h3 class="mb-1"><a href="tour-grid.html">Red City Land</a></h3>
-                                        <div class="rating-main d-flex align-items-center pb-2">
-                                            <div class="rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                            <span class="ms-2">(25)</span>
-                                        </div>
-                                        <p class=" border-b pb-2 mb-2">Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse cillum</p>
-                                        <div class="entry-meta">
-                                            <div class="entry-author d-flex align-items-center">
-                                                <p class="mb-0"><span class="theme fw-bold fs-5"> $120.00</span> | Per
-                                                    person</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 mb-4">
-                                <div class="trend-item rounded box-shadow">
-                                    <div class="trend-image position-relative">
-                                        <img src="assets/images/trending/trending4.jpg" alt="image" class="">
-                                        <div class="color-overlay"></div>
-                                    </div>
-                                    <div class="trend-content p-4 pt-5 position-relative bg-white">
-                                        <div class="trend-meta bg-theme white px-3 py-2 rounded">
-                                            <div class="entry-author">
-                                                <i class="icon-calendar"></i>
-                                                <span class="fw-bold"> 5 Days Tours</span>
-                                            </div>
-                                        </div>
-                                        <h5 class="theme mb-1"><i class="flaticon-location-pin"></i> Bangladesh</h5>
-                                        <h3 class="mb-1"><a href="tour-grid.html">Cox's bazar Beach</a></h3>
-                                        <div class="rating-main d-flex align-items-center pb-2">
-                                            <div class="rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                            <span class="ms-2">(32)</span>
-                                        </div>
-                                        <p class=" border-b pb-2 mb-2">Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse cillum</p>
-                                        <div class="entry-meta">
-                                            <div class="entry-author d-flex align-items-center">
-                                                <p class="mb-0"><span class="theme fw-bold fs-5"> $100.00</span> | Per
-                                                    person</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Last Minute Deal Ends -->
-
-    <!-- Discount action starts -->
-    <section class="discount-action pt-6" style="background-image:url(assets/images/section-bg1.png); background-position:center;">
-        <div class="section-shape section-shape1 top-inherit bottom-0" style="background-image: url(assets/images/shape8.png);"></div>
-        <div class="container">
-            <div class="call-banner rounded pt-10 pb-14">
-                <div class="call-banner-inner w-75 mx-auto text-center px-5">
-                    <div class="trend-content-main">
-                        <div class="trend-content mb-5 pb-2 px-5">
-                            <h5 class="mb-1 theme">Love Where Your're Going</h5>
-                            <h2><a href="detail-fullwidth.html">Explore Your Life, <span class="theme1"> Travel Where
-                                        You Want!</span></a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div class="video-button text-center position-relative">
-                            <div class="call-button text-center">
-                            <iframe width="1424" height="400" src="https://www.youtube.com/embed/BFS9n4B_2xA" title="Bali in 8k ULTRA HD HDR -  Paradise of Asia (60 FPS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
-                            <div class="video-figure"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="white-overlay"></div>
-    </section>
-    <!-- Discount action Ends -->
-
-    <!-- offer Packages Starts -->
-    <section class="trending pb-0 pt-4">
-        <div class="container">
-            <div class="section-title mb-6 w-75 mx-auto text-center">
-                <h4 class="mb-1 theme1">Top Offers</h4>
-                <h2 class="mb-1">Special <span class="theme">Offers & Discount </span> Packages</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                </p>
-            </div>
-            <div class="trend-box">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                        <div class="trend-item rounded box-shadow bg-white">
-                            <div class="trend-image position-relative">
-                                <img src="assets/images/trending/trending3.jpg" alt="image" class="">
-                                <div class="ribbon ribbon-top-left"><span class="fw-bold">20% OFF</span></div>
-                                <div class="color-overlay"></div>
-                            </div>
-                            <div class="trend-content p-4 pt-5 position-relative">
-                                <div class="trend-meta bg-theme white px-3 py-2 rounded">
-                                    <div class="entry-author">
-                                        <i class="icon-calendar"></i>
-                                        <span class="fw-bold"> 9 Days Tours</span>
-                                    </div>
-                                </div>
-                                <h5 class="theme mb-1"><i class="flaticon-location-pin"></i> Croatia</h5>
-                                <h3 class="mb-1"><a href="tour-grid.html">Piazza Castello</a></h3>
-                                <div class="rating-main d-flex align-items-center pb-2">
-                                    <div class="rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                    </div>
-                                    <span class="ms-2">(12)</span>
-                                </div>
-                                <p class=" border-b pb-2 mb-2">Duis aute irure dolor in reprehenderit in voluptate velit
-                                    esse cillum</p>
-                                <div class="entry-meta">
-                                    <div class="entry-author d-flex align-items-center">
-                                        <p class="mb-0"><span class="theme fw-bold fs-5"> $170.00</span> | Per person
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-                        <div class="trend-item box-shadow rounded bg-white">
-                            <div class="trend-image position-relative">
-                                <img src="assets/images/trending/trending1.jpg" alt="image">
-                                <div class="ribbon ribbon-top-left"><span class="fw-bold">30% OFF</span></div>
-                                <div class="color-overlay"></div>
-                            </div>
-                            <div class="trend-content p-4 pt-5 position-relative">
-                                <div class="trend-meta bg-theme white px-3 py-2 rounded">
-                                    <div class="entry-author">
-                                        <i class="icon-calendar"></i>
-                                        <span class="fw-bold"> 9 Days Tours</span>
-                                    </div>
-                                </div>
-                                <h5 class="theme mb-1"><i class="flaticon-location-pin"></i> Greece</h5>
-                                <h3 class="mb-1"><a href="tour-grid.html">Santorini, Oia</a></h3>
-                                <div class="rating-main d-flex align-items-center pb-2">
-                                    <div class="rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                    </div>
-                                    <span class="ms-2">(38)</span>
-                                </div>
-                                <p class=" border-b pb-2 mb-2">Duis aute irure dolor in reprehenderit in voluptate velit
-                                    esse cillum</p>
-                                <div class="entry-meta">
-                                    <div class="entry-author d-flex align-items-center">
-                                        <p class="mb-0"><span class="theme fw-bold fs-5"> $180.00</span> | Per person
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="trend-item box-shadow rounded bg-white">
-                            <div class="trend-image position-relative">
-                                <img src="assets/images/trending/trending2.jpg" alt="image">
-                                <div class="ribbon ribbon-top-left"><span class="fw-bold">15% OFF</span></div>
-                                <div class="color-overlay"></div>
-                            </div>
-                            <div class="trend-content p-4 pt-5 position-relative">
-                                <div class="trend-meta bg-theme white px-3 py-2 rounded">
-                                    <div class="entry-author">
-                                        <i class="icon-calendar"></i>
-                                        <span class="fw-bold"> 9 Days Tours</span>
-                                    </div>
-                                </div>
-                                <h5 class="theme mb-1"><i class="flaticon-location-pin"></i> Maldives</h5>
-                                <h3 class="mb-1"><a href="tour-grid.html">Hurawalhi Island</a></h3>
-                                <div class="rating-main d-flex align-items-center pb-2">
-                                    <div class="rating">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                    </div>
-                                    <span class="ms-2">(18)</span>
-                                </div>
-                                <p class=" border-b pb-2 mb-2">Duis aute irure dolor in reprehenderit in voluptate velit
-                                    esse cillum</p>
-                                <div class="entry-meta">
-                                    <div class="entry-author d-flex align-items-center">
-                                        <p class="mb-0"><span class="theme fw-bold fs-5"> $260.00</span> | Per person
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- offer Packages Ends -->
 
     <!-- our teams starts -->
     <section class="our-team pb-6">
@@ -1074,7 +558,7 @@ include_once("./layouts-landing/head.php");
     <!-- testimonial ends -->
 
     <!-- partner starts -->
-    <div class="our-partner p-0">
+    <!-- <div class="our-partner p-0">
         <div class="container">
             <div class="partners_inner">
                 <ul>
@@ -1089,15 +573,15 @@ include_once("./layouts-landing/head.php");
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- partner ends -->
 
     <!-- recent-articles starts -->
     <section class="trending recent-articles pb-6">
         <div class="container">
             <div class="section-title mb-6 w-75 mx-auto text-center">
-                <h4 class="mb-1 theme1">Our Blogs Offers</h4>
-                <h2 class="mb-1">Recent <span class="theme">Articles & Posts</span></h2>
+                <h4 class="mb-1 theme1">Our Comments</h4>
+                <h2 class="mb-1">Recent <span class="theme">Comments</span></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                 </p>
             </div>
@@ -1208,118 +692,15 @@ include_once("./layouts-landing/head.php");
         </form>
     </div>
 
-    <!-- login registration modal -->
-    <div class="modal fade log-reg" id="exampleModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="post-tabs">
-                        <!-- tab navs -->
-                        <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button aria-controls="login" aria-selected="false" class="nav-link active" data-bs-target="#login" data-bs-toggle="tab" id="login-tab" role="tab" type="button">Login</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button aria-controls="register" aria-selected="true" class="nav-link" data-bs-target="#register" data-bs-toggle="tab" id="register-tab" role="tab" type="button">Register</button>
-                            </li>
-                        </ul>
-                        <!-- tab contents -->
-                        <div class="tab-content blog-full" id="postsTabContent">
-                            <!-- popular posts -->
-                            <div aria-labelledby="login-tab" class="tab-pane fade active show" id="login" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="blog-image rounded">
-                                            <a href="#" style="background-image: url(images/trending/trending5.jpg);"></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h4 class="text-center border-b pb-2">Login</h4>
-                                        <div class="log-reg-button d-flex align-items-center justify-content-between">
-                                            <button type="submit" class="btn btn-fb">
-                                                <i class="fab fa-facebook"></i> Login with Facebook
-                                            </button>
-                                            <button type="submit" class="btn btn-google">
-                                                <i class="fab fa-google"></i> Login with Google
-                                            </button>
-                                        </div>
-                                        <hr class="log-reg-hr position-relative my-4 overflow-visible">
-                                        <form method="post" action="#" name="contactform" id="contactform">
-                                            <div class="form-group mb-2">
-                                                <input type="text" name="user_name" class="form-control" id="fname" placeholder="User Name or Email Address">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="password" name="password_name" class="form-control" id="lpass" placeholder="Password">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="checkbox" class="custom-control-input" id="exampleCheck">
-                                                <label class="custom-control-label mb-0" for="exampleCheck1">Remember
-                                                    me</label>
-                                                <a class="float-end" href="#">Lost your password?</a>
-                                            </div>
-                                            <div class="comment-btn mb-2 pb-2 text-center border-b">
-                                                <input type="submit" class="nir-btn w-100" id="submit" value="Login">
-                                            </div>
-                                            <p class="text-center">Don't have an account? <a href="#" class="theme">Register</a></p>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent posts -->
-                            <div aria-labelledby="register-tab" class="tab-pane fade" id="register" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="blog-image rounded">
-                                            <a href="#" style="background-image: url(images/trending/trending5.jpg);"></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h4 class="text-center border-b pb-2">Register</h4>
-                                        <div class="log-reg-button d-flex align-items-center justify-content-between">
-                                            <button type="submit" class="btn btn-fb">
-                                                <i class="fab fa-facebook"></i> Login with Facebook
-                                            </button>
-                                            <button type="submit" class="btn btn-google">
-                                                <i class="fab fa-google"></i> Login with Google
-                                            </button>
-                                        </div>
-                                        <hr class="log-reg-hr position-relative my-4 overflow-visible">
-                                        <form method="post" action="#" name="contactform1" id="contactform1">
-                                            <div class="form-group mb-2">
-                                                <input type="text" name="user_name" class="form-control" id="fname1" placeholder="User Name">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="text" name="user_name" class="form-control" id="femail" placeholder="Email Address">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="password" name="password_name" class="form-control" id="lpass1" placeholder="Password">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="password" name="password_name" class="form-control" id="lrepass" placeholder="Re-enter Password">
-                                            </div>
-                                            <div class="form-group mb-2 d-flex">
-                                                <input type="checkbox" class="custom-control-input" id="exampleCheck1">
-                                                <label class="custom-control-label mb-0 ms-1 lh-1" for="exampleCheck1">I
-                                                    have read and accept the Terms and Privacy Policy?</label>
-                                            </div>
-                                            <div class="comment-btn mb-2 pb-2 text-center border-b">
-                                                <input type="submit" class="nir-btn w-100" id="submit1" value="Register">
-                                            </div>
-                                            <p class="text-center">Already have an account? <a href="#" class="theme">Login</a></p>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <?php
     include_once("./layouts-landing/script.php");
     ?>
+
+
+
+
 
 </body>
 

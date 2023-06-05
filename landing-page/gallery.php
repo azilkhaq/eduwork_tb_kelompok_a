@@ -181,50 +181,6 @@ include_once("./layouts-landing/head.php");
     </div>
     <!-- Gallery Ends -->
 
-    <!-- partner starts -->
-    <section class="our-partner pb-6 pt-6">
-        <div class="container">
-            <div class="section-title mb-6 w-75 mx-auto text-center">
-                <h4 class="mb-1 theme1">Our Partners</h4>
-                <h2 class="mb-1">Our Awesome <span class="theme">partners</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-            <div class="row align-items-center partner-in partner-slider">
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-5.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-2.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-3.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-4.png" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="partner-item p-4 py-2 rounded bg-lgrey">
-                        <img src="assets/images/cl-5.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- partner ends -->
-
     <?php
     include_once("./layouts-landing/footer.php");
     ?>
