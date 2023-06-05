@@ -48,27 +48,35 @@
                             <div class="card">
                                 <div class="card-body">
 
-                                    <h4 class="card-title">Default Datatable</h4>
-                                    <p class="card-title-desc">DataTables has most features enabled by default, so all
-                                        you need to do to use it with your own tables is to call the construction
-                                        function: <code>$().DataTable();</code>.
-                                    </p>
+                                    <h4 class="card-title">Facility Data</h4>
 
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
+                                                <th>ID</th>
+                                                <th>Facility Name</th>
+                                                <th>Tour id</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-</tbody>
-
-
+                                        <?php
+                                            include ('./connection.php');
+                                            $query = mysqli_query($koneksi, "SELECT * FROM facilities");
+                                            while($data = mysqli_fetch_array($query)){
+                                        ?>
+                                        <tr>
+            <td class="text-center"><?php echo $data['id'] ?></td>
+            <td class="text-center"><?php echo $data['facility_name'] ?></td>
+            <td class="text-center"><?php echo $data['tour_id'] ?></td>
+            <td class="text-center">
+            <a  class="btn btn-warning" href="edit.php?id=<?= $data['id']; ?>">Edit</a>
+            <a  class="btn btn-danger" href="delete.php?id=<?= $data['id']; ?> " onclick="return confirm('Yakin dihapus')">Delete</a>
+        </tr>
+        <?php 
+            } 
+        ?>
+                                        </tbody>
                                     </table>
 
                                 </div>
@@ -83,6 +91,12 @@
 
         </div>
     </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#mytable').DataTable();
+
+    });
+</script>
 
     <?php include_once "../../layouts/script.php" ?>
 </body>
