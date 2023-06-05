@@ -22,8 +22,8 @@ include_once("./layouts-landing/head.php");
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4">
                         <div class="banner-content text-lg-start text-center">
-                            <h4 class="theme mb-0">Explore The World</h4>
-                            <h1>Start Planning Your Dream Trip Today!</h1>
+                            <h4 class="theme mb-0">Jelajahi Seluruh Dunia</h4>
+                            <h1>Rencanakan Liburan Impianmu!</h1>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore</p>
 
@@ -40,56 +40,40 @@ include_once("./layouts-landing/head.php");
                         <div class="col-lg-3 col-md-6 my-4">
                             <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
                                 <div class="trending-topic-content">
-                                    <img src="assets/images/icons/004-camping-tent.png" class="mb-1 d-inline-block" alt="">
-                                    <h4 class="mb-0"><a href="tour-grid.html">Camping</a></h4>
+                                    <img src="assets/images/icons/w-alam.png" class="mb-1 d-inline-block" alt="">
+                                    <h4 class="mb-0 font-desk-cat"><a href="tour-grid.html">Wisata Alam</a></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 my-4">
                             <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
                                 <div class="trending-topic-content text-center">
-                                    <img src="assets/images/icons/003-hiking.png" class="mb-1 d-inline-block" alt="">
-                                    <h4 class="mb-0"><a href="tour-grid.html">Hiking</a></h4>
+                                    <img src="assets/images/icons/w-sejarah.png" class="mb-1 d-inline-block" alt="">
+                                    <h4 class="mb-0 font-desk-cat"><a href="tour-grid.html">Wisata Sejarah</a></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 my-4">
                             <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
                                 <div class="trending-topic-content">
-                                    <img src="assets/images/icons/005-sunbed.png" class="mb-1 d-inline-block" alt="">
-                                    <h4 class="mb-0"><a href="tour-grid.html">Beach Tours</a></h4>
+                                    <img src="assets/images/icons/w-budaya.png" class="mb-1 d-inline-block" alt="">
+                                    <h4 class="mb-0 font-desk-cat"><a href="tour-grid.html">Wisata Budaya</a></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 my-4">
                             <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
                                 <div class="trending-topic-content">
-                                    <img src="assets/images/icons/006-surf.png" class="mb-1 d-inline-block" alt="">
-                                    <h4 class="mb-0"><a href="tour-grid.html">Surfing</a></h4>
+                                    <img src="assets/images/icons/w-edukasi.png" class="mb-1 d-inline-block" alt="">
+                                    <h4 class="mb-0 font-desk-cat"><a href="tour-grid.html">Wisata Edukasi</a></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 my-4">
                             <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
                                 <div class="trending-topic-content">
-                                    <img src="assets/images/icons/002-safari.png" class="mb-1 d-inline-block" alt="">
-                                    <h4 class="mb-0"><a href="tour-grid.html">Safari</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 my-4">
-                            <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
-                                <div class="trending-topic-content">
-                                    <img src="assets/images/icons/008-cycling.png" class="mb-1 d-inline-block" alt="">
-                                    <h4 class="mb-0"><a href="tour-grid.html">Cycling</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 my-4">
-                            <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
-                                <img src="assets/images/icons/007-hiking-1.png" class="mb-1 d-inline-block" alt="">
-                                <div class="trending-topic-content">
-                                    <h4 class="mb-0"><a href="tour-grid.html">Trekings</a></h4>
+                                    <img src="assets/images/icons/w-religi.png" class="mb-1 d-inline-block" alt="">
+                                    <h4 class="mb-0 font-desk-cat"><a href="tour-grid.html">Wisata Religi</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -393,7 +377,11 @@ include_once("./layouts-landing/head.php");
     include_once("./layouts-landing/script.php");
     ?>
 
-
+    <style>
+        .font-desk-cat {
+            font-size: 18px !important;
+        }
+    </style>
 
 
 

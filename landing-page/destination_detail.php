@@ -60,12 +60,20 @@ include_once("./layouts-landing/head.php");
                             </div>
 
                             <div class="description-images mb-4">
-                                <img src="assets/images/trending/trending-large.jpg" alt="" class="w-100 rounded">
+                                <img src="assets/images/trending/borbudur.jpg" alt="" class="w-100 rounded">
                             </div>
 
                             <div class="description mb-2">
                                 <h4>Deskripsi</h4>
                                 <p>Borobudur adalah candi Buddha terbesar di dunia dan merupakan Situs Warisan Dunia UNESCO. Terletak di dekat Yogyakarta, candi ini memiliki relief yang indah dan menampilkan kebudayaan Buddha.</p>
+                            </div>
+
+                            <div class="description mb-2">
+                                <h4>Fasilitas</h4>
+                                <ul>
+                                    <li>Kamar Mandi</li><br>
+                                    <li>Smoke Room</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -132,7 +140,7 @@ include_once("./layouts-landing/head.php");
                                             <article class="post mb-2 border-b pb-2">
                                                 <div class="s-content d-flex align-items-center justify-space-between">
                                                     <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/trending/trending1.jpg" alt=""></a>
+                                                        <a href="detail-1.html"><img src="assets/images/trending/borbudur.jpg" alt=""></a>
                                                     </div>
                                                     <div class="content-list w-75">
                                                         <h5 class="mb-1"><a href="detail-1.html">Borobudur - Yogyakarta</a></h5>
@@ -143,7 +151,7 @@ include_once("./layouts-landing/head.php");
                                             <article class="post border-b pb-2 mb-2">
                                                 <div class="s-content d-flex align-items-center justify-space-between">
                                                     <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/trending/trending2.jpg" alt=""></a>
+                                                        <a href="detail-1.html"><img src="assets/images/trending/pasar-lama.png" alt=""></a>
                                                     </div>
                                                     <div class="content-list w-75">
                                                         <h5 class="mb-1"><a href="detail-1.html">Pasar Lama - Tanggerang</a></h5>
@@ -154,7 +162,7 @@ include_once("./layouts-landing/head.php");
                                             <article class="post mb-2 border-b pb-2">
                                                 <div class="s-content d-flex align-items-center justify-space-between">
                                                     <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/trending/trending1.jpg" alt=""></a>
+                                                        <a href="detail-1.html"><img src="assets/images/trending/tirta-gangga.jpg" alt=""></a>
                                                     </div>
                                                     <div class="content-list w-75">
                                                         <h5 class="mb-1"><a href="detail-1.html">Istana Tirta Gangga - Bali</a></h5>
