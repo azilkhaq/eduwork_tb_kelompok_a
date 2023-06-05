@@ -41,8 +41,6 @@
                                 <div class="card-body">
 
                                     <h4 class="card-title">Add Data</h4>
-                                    <p class="card-title-desc">Here are examples of <code>.form-control</code> applied
-                                        to each textual HTML5 <code>&lt;input&gt;</code> <code>type</code>.</p>
                                        
                                     <form id="myForm" action="process_add.php" method="POST">
                                     <div class="mb-3 row">
