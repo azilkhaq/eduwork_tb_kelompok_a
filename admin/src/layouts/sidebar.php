@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="calendar.html" class="waves-effect">
+                    <a href="../kategori" class="waves-effect">
                         <i class="mdi mdi-file-tree"></i>
                         <span>Kategori</span>
                     </a>
