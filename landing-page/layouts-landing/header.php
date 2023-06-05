@@ -38,22 +38,14 @@
                                    <a href="index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <i class="icon-arrow-down" aria-hidden="true"></i></a>
                                </li>
 
-                               <li><a href="about.php">About Us</a></li>
+                               <li><a href="about.php">Tentang Kami</a></li>
 
                                <li class="submenu dropdown">
-                                   <a href="destinasi.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Destinations <i class="icon-arrow-down" aria-hidden="true"></i></a>
+                                   <a href="destinasi.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wisata <i class="icon-arrow-down" aria-hidden="true"></i></a>
                                </li>
-                               <li><a href="gallery.php">Gallery</a></li>
-                               <li class="search-main"><a href="#search1" class="mt_search"><i class="fa fa-search"></i></a></li>
+                               <li><a href="gallery.php">Galeri</a></li>
                            </ul>
-                       </div><!-- /.navbar-collapse -->
-                       <!-- <div class="register-login d-flex align-items-center">
-                           <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="me-3">
-                               <i class="icon-user"></i> Login/Register
-                           </a>
-                           <a href="#" class="nir-btn white">Book Now</a>
-                       </div> -->
-
+                       </div>
                        <div id="slicknav-mobile"></div>
                    </div>
                </div><!-- /.container-fluid -->

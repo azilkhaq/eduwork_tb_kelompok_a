@@ -21,11 +21,11 @@ include_once("./layouts-landing/head.php");
         <div class="breadcrumb-outer">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="mb-3">Bangkok - Thailand</h1>
+                    <h1 class="mb-3">Borobudur - Yogyakarta</h1>
                     <nav aria-label="breadcrumb" class="d-block">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Destination Detail</li>
+                            <li class="breadcrumb-item active" aria-current="page">Detail Wisata</li>
                         </ul>
                     </nav>
                 </div>
@@ -44,9 +44,9 @@ include_once("./layouts-landing/head.php");
                         <div id="highlight" class="mb-4">
                             <div class="single-full-title border-b mb-2 pb-2">
                                 <div class="single-title">
-                                    <h2 class="mb-1">Bangkok Thailand</h2>
+                                    <h2 class="mb-1">Borobudur - Yogyakarta</h2>
                                     <div class="rating-main d-flex align-items-center">
-                                        <p class="mb-0 me-2"><i class="icon-location-pin"></i> Greater London, United Kingdom</p>
+                                        <p class="mb-0 me-2"><i class="icon-location-pin"></i> Yogyakarta</p>
                                         <div class="rating me-2">
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
@@ -54,7 +54,7 @@ include_once("./layouts-landing/head.php");
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                         </div>
-                                        <span>(1,186 Reviews)</span>
+                                        <span>(1,186 Review)</span>
                                     </div>
                                 </div>
                             </div>
@@ -64,14 +64,13 @@ include_once("./layouts-landing/head.php");
                             </div>
 
                             <div class="description mb-2">
-                                <h4>Description</h4>
-                                <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
-                                <p class="mb-0">The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                                <h4>Deskripsi</h4>
+                                <p>Borobudur adalah candi Buddha terbesar di dunia dan merupakan Situs Warisan Dunia UNESCO. Terletak di dekat Yogyakarta, candi ini memiliki relief yang indah dan menampilkan kebudayaan Buddha.</p>
                             </div>
                         </div>
 
                         <div class="description mb-2">
-                            <h4 class="mb-2">Gallery</h4>
+                            <h4 class="mb-2">Galeri</h4>
                             <div class="services-image d-md-flex">
                                 <div class="me-md-2 rounded overflow-hidden mb-2"><img src="assets/images/trending/trending5.jpg" alt="" class="w-100"></div>
                                 <div class="ms-md-2 rounded overflow-hidden mb-2"><img src="assets/images/trending/trending6.jpg" alt="" class="w-100"></div>
@@ -79,17 +78,17 @@ include_once("./layouts-landing/head.php");
                         </div>
 
                         <div id="single-map" class="single-map mb-4">
-                            <h4>Map</h4>
+                            <h4>Lokasi</h4>
                             <div class="map rounded overflow-hidden">
                                 <div style="width: 100%">
-                                    <iframe class=" rounded overflow-hidden" height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=+(mangal%20bazar)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                                    <iframe class=" rounded overflow-hidden" height="400"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63274.38201573587!2d110.15826778824832!3d-7.613131978595187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cef5e6c0f59%3A0x4027a76e352eb60!2sKec.%20Borobudur%2C%20Kabupaten%20Magelang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1685958705159!5m2!1sid!2sid"></iframe>
                                 </div>
                             </div>
                         </div>
 
                         <!-- blog review -->
-                        <div id="single-add-review" class="single-add-review">
-                            <h4>Write a Review</h4>
+                        <div id="single-add-review" class="single-add-review" style="margin-top: 10px;">
+                            <h4>Review</h4>
                             <form>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -109,7 +108,7 @@ include_once("./layouts-landing/head.php");
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-btn">
-                                            <a href="#" class="nir-btn">Submit Review</a>
+                                            <a href="#" class="nir-btn">Submit</a>
                                         </div>
                                     </div>
                                 </div>
@@ -125,15 +124,7 @@ include_once("./layouts-landing/head.php");
                             <div class="sidebar-tabs">
                                 <div class="post-tabs">
                                     <!-- tab navs -->
-                                    <h4 class="">Destinations Popular</h4>
-                                    <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab1" role="tablist">
-                                        <li class="nav-item d-inline-block" role="presentation">
-                                            <button aria-selected="false" class="nav-link active" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab" type="button">Popular</button>
-                                        </li>
-                                        <li class="nav-item d-inline-block" role="presentation">
-                                            <button aria-selected="true" class="nav-link" data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab" role="tab" type="button">Recent</button>
-                                        </li>
-                                    </ul>
+                                    <h4 class="">Wisata Serupa</h4>
                                     <!-- tab contents -->
                                     <div class="tab-content" id="postsTabContent1">
                                         <!-- popular posts -->
@@ -144,8 +135,7 @@ include_once("./layouts-landing/head.php");
                                                         <a href="detail-1.html"><img src="assets/images/trending/trending1.jpg" alt=""></a>
                                                     </div>
                                                     <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">An Incredibly Easy Method That Works For All</a></h5>
-                                                        <div class="date">10 Apr 2021</div>
+                                                        <h5 class="mb-1"><a href="detail-1.html">Borobudur - Yogyakarta</a></h5>
                                                     </div>
                                                 </div>
                                             </article>
@@ -156,8 +146,7 @@ include_once("./layouts-landing/head.php");
                                                         <a href="detail-1.html"><img src="assets/images/trending/trending2.jpg" alt=""></a>
                                                     </div>
                                                     <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">15 Unheard Ways To Achieve Greater Walker</a></h5>
-                                                        <div class="date">29 Mar 2021</div>
+                                                        <h5 class="mb-1"><a href="detail-1.html">Pasar Lama - Tanggerang</a></h5>
                                                     </div>
                                                 </div>
                                             </article>
@@ -168,8 +157,7 @@ include_once("./layouts-landing/head.php");
                                                         <a href="detail-1.html"><img src="assets/images/trending/trending1.jpg" alt=""></a>
                                                     </div>
                                                     <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">An Incredibly Easy Method That Works For All</a></h5>
-                                                        <div class="date">10 Apr 2021</div>
+                                                        <h5 class="mb-1"><a href="detail-1.html">Istana Tirta Gangga - Bali</a></h5>
                                                     </div>
                                                 </div>
                                             </article>
@@ -180,58 +168,7 @@ include_once("./layouts-landing/head.php");
                                                         <a href="detail-1.html"><img src="assets/images/trending/trending4.jpg" alt=""></a>
                                                     </div>
                                                     <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">15 Unheard Ways To Achieve Greater Walker</a></h5>
-                                                        <div class="date">21 Feb 2021</div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <!-- Recent posts -->
-                                        <div aria-labelledby="recent-tab" class="tab-pane fade" id="recent" role="tabpanel">
-                                            <article class="post mb-2 border-b pb-2">
-                                                <div class="s-content d-flex align-items-center justify-space-between">
-                                                    <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/trending/trending5.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">10 Ways To Immediately Start Selling Furniture</a></h5>
-                                                        <div class="date">08 Mar 2021</div>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <article class="post border-b pb-2 mb-2">
-                                                <div class="s-content d-flex align-items-center justify-space-between">
-                                                    <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/trending/trending6.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">Photography Photo modify and Beautiful Walker</a></h5>
-                                                        <div class="date">18 Jan 2021</div>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <article class="post mb-2 border-b pb-2">
-                                                <div class="s-content d-flex align-items-center justify-space-between">
-                                                    <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/trending/trending1.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">An Incredibly Easy Method That Works For All</a></h5>
-                                                        <div class="date">10 Apr 2021</div>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <article class="post">
-                                                <div class="s-content d-flex align-items-center justify-space-between">
-                                                    <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/trending/trending3.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">1Certified Graphic Design with Free Project Course</a></h5>
-                                                        <div class="date">12 Feb 2021</div>
+                                                        <h5 class="mb-1"><a href="detail-1.html">Kebun Raya - Bogor</a></h5>
                                                     </div>
                                                 </div>
                                             </article>

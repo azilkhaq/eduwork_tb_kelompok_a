@@ -21,11 +21,11 @@ include_once("./layouts-landing/head.php");
         <div class="breadcrumb-outer">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="mb-3">Gallery One</h1>
+                    <h1 class="mb-3">Galeri</h1>
                     <nav aria-label="breadcrumb" class="d-block">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Gallery One</li>
+                            <li class="breadcrumb-item active" aria-current="page">Galeri</li>
                         </ul>
                     </nav>
                 </div>
@@ -39,9 +39,7 @@ include_once("./layouts-landing/head.php");
     <div class="gallery pt-6 pb-0">
         <div class="container">
             <div class="section-title mb-6 text-center w-75 mx-auto">
-                <h4 class="mb-1 theme1">Our Gallery</h4>
-                <h2 class="mb-1">Some Beautiful <span class="theme">Snapshoots</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <h2 class="mb-1">Galeri <span class="theme">Wisata</span></h2>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">

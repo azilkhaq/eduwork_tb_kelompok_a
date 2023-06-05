@@ -1,64 +1,6 @@
  <!-- footer starts -->
  <footer class="pt-20 pb-4" style="background-image: url(assets/images/background_pattern.png);">
         <div class="section-shape top-0" style="background-image: url(assets/images/shape8.png);"></div>
-        <!-- Instagram starts -->
-        <div class="insta-main pb-10">
-            <div class="container">
-                <div class="insta-inner">
-                    <div class="follow-button">
-                        <h5 class="m-0 rounded"><i class="fab fa-instagram"></i> Follow on Instagram</h5>
-                    </div>
-                    <div class="row attract-slider">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-3.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-4.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-5.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-1.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-7.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-8.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-2.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-6.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="insta-image rounded">
-                                <a href="gallery.html"><img src="assets/images/insta/ins-9.jpg" alt="insta"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Instagram ends -->
         <div class="footer-upper pb-4">
             <div class="container">
                 <div class="row">
@@ -79,7 +21,7 @@
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-12 mb-4">
                         <div class="footer-links">
-                            <h3 class="white">Quick link</h3>
+                            <h3 class="white">Menu</h3>
                             <ul>
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="about-us.html">Destinations</a></li>
@@ -89,26 +31,23 @@
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-12 mb-4">
                         <div class="footer-links">
-                            <h3 class="white">Categories</h3>
+                            <h3 class="white">Kategori</h3>
                             <ul>
-                                <li><a href="about-us.html">Travel</a></li>
-                                <li><a href="about-us.html">Technology</a></li>
-                                <li><a href="about-us.html">Lifestyle</a></li>
-                                <li><a href="about-us.html">Destinations</a></li>
-                                <li><a href="about-us.html">Entertainment</a></li>
-                                <li><a href="about-us.html">Business</a></li>
+                                <li><a href="about-us.html">Wisata Alam</a></li>
+                                <li><a href="about-us.html">Wisata Sejarah</a></li>
+                                <li><a href="about-us.html">Wisata Budaya</a></li>
+                                <li><a href="about-us.html">Wisata Budaya</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div class="footer-links">
-                            <h3 class="white">Criticism and Suggestions</h3>
+                            <h3 class="white">Kritik dan Saran</h3>
                             <div class="newsletter-form ">
-                                <p class="mb-3">Jin our community of over 200,000 global readers who receives emails
-                                    filled with news, promotions, and other good stuff.</p>
-                                <form action="#" method="get" accept-charset="utf-8" class="border-0 d-flex align-items-center">
-                                    <input type="text" placeholder="Email Address">
-                                    <button class="nir-btn ms-2">Subscribe</button>
+                                <form action="#" method="get" accept-charset="utf-8" class="border-0">
+                                    <input type="text" placeholder="Email" style="margin-bottom: 10px;">
+                                    <input type="text" placeholder="Saran" style="margin-bottom: 10px;">
+                                    <button class="nir-btn ms-2" style="float: right;">Kirim</button>
                                 </form>
                             </div>
                         </div>
