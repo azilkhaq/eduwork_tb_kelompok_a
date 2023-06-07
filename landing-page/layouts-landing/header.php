@@ -27,8 +27,8 @@
                    <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-3 pt-3">
                        <!-- Brand and toggle get grouped for better mobile display -->
                        <div class="navbar-header">
-                           <a class="navbar-brand" href="index.html">
-                               <img src="assets/images/logo.png" alt="image">
+                           <a class="navbar-brand" href="index.php">
+                               <img src="assets/images/tavelin.png" alt="image">
                            </a>
                        </div>
                        <!-- Collect the nav links, forms, and other content for toggling -->

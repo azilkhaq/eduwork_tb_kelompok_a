@@ -8,7 +8,7 @@
 
     <title>Travelin - Travel Tour Booking HTML Templates</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo-title.png">
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!--Custom CSS-->

@@ -37,7 +37,7 @@ include_once("./layouts-landing/head.php");
     <!-- BreadCrumb Ends -->
 
     <!-- about-us starts -->
-    <section class="about-us pt-6" style="background-image:url(assets/images/background_pattern.png); background-position:bottom right;">
+    <section class="about-us pt-6">
         <div class="container">
             <div class="about-image-box">
                 <div class="row d-flex align-items-center justify-content-between">
@@ -50,7 +50,7 @@ include_once("./layouts-landing/head.php");
                     </div>
                     <div class="col-lg-6 mb-4 pe-4">
                         <div class="about-image" style="animation:none; background:transparent;">
-                            <img src="assets/images/travel.png" alt="">
+                            <img src="assets/images/about-us.png" alt="">
                         </div>
                     </div>
                 </div>

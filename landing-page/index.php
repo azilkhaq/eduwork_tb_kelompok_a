@@ -31,7 +31,7 @@ include_once("./layouts-landing/head.php");
                     </div>
                     <div class="col-lg-6 mb-4">
                         <div class="banner-image">
-                            <img src="assets/images/travel.png" alt="">
+                            <img src="assets/images/traveler-edt.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ include_once("./layouts-landing/head.php");
                         <div class="col-lg-3 col-md-6 my-4">
                             <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
                                 <div class="trending-topic-content">
-                                    <img src="assets/images/icons/w-religi.png" class="mb-1 d-inline-block" alt="">
+                                    <img src="assets/images/icons/w-religi1.png" class="mb-1 d-inline-block" alt="">
                                     <h4 class="mb-0 font-desk-cat"><a href="tour-grid.html">Wisata Religi</a></h4>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@ include_once("./layouts-landing/head.php");
                                     </div>
                                     <span class="ms-2">(12)</span>
                                 </div>
-                                <p class=" border-b pb-2 mb-2">Borobudur adalah candi Buddha terbesar di dunia dan merupakan Situs Warisan Dunia UNESCO. Terletak di dekat Yogyakarta, candi ini memiliki relief yang indah dan menampilkan kebudayaan Buddha.</p>
+                                <p class=" border-b pb-2 mb-2 deskrip-wisata">Borobudur adalah candi Buddha terbesar di dunia dan merupakan Situs Warisan Dunia UNESCO. Terletak di dekat Yogyakarta, candi ini memiliki relief yang indah dan menampilkan kebudayaan Buddha.</p>
                                 <div class="entry-meta">
                                     <div class="entry-author d-flex align-items-center">
                                         <a href="./destination_detail.php">
@@ -160,7 +160,7 @@ include_once("./layouts-landing/head.php");
                                     </div>
                                     <span class="ms-2">(5)</span>
                                 </div>
-                                <p class=" border-b pb-2 mb-2">Tidak jauh dari ibu kota ada destinasi wisata kuliner Pasar Lama Tangerang. Beberapa varian makanan yang ada di sini adalah ketoprak, bakso, nasi goreng, sempol ayam, dan laksa. Selain itu, ada banyak minuman menyegarkan, seperti susu kedelai, kacang hijau, hingga es alpukat kocok.</p>
+                                <p class=" border-b pb-2 mb-2 deskrip-wisata">Tidak jauh dari ibu kota ada destinasi wisata kuliner Pasar Lama Tangerang. Beberapa varian makanan yang ada di sini adalah ketoprak, bakso, nasi goreng, sempol ayam, dan laksa. Selain itu ....</p>
                                 <div class="entry-meta">
                                     <div class="entry-author d-flex align-items-center">
                                         <a href="./destination_detail.php">
@@ -195,7 +195,7 @@ include_once("./layouts-landing/head.php");
                                     </div>
                                     <span class="ms-2">(5)</span>
                                 </div>
-                                <p class=" border-b pb-2 mb-2"> merupakan sebuah istana peninggalan Kerajaan Karangasem. Istana Tirta Gangga tidak hanya menawarkan informasi sejarah dan budaya yang menarik, tapi dari segi arsitekturnya juga menawarkan ambiens yang cukup tenang dengan lanskap pepohonan yang rimbun serta taman air yang mengelilingi kawasan ini.</p>
+                                <p class=" border-b pb-2 mb-2 deskrip-wisata"> merupakan sebuah istana peninggalan Kerajaan Karangasem. Istana Tirta Gangga tidak hanya menawarkan informasi sejarah dan budaya yang menarik ...</p>
                                 <div class="entry-meta">
                                     <div class="entry-author d-flex align-items-center">
                                         <a href="./destination_detail.php">
@@ -224,7 +224,7 @@ include_once("./layouts-landing/head.php");
             <div class="row align-items-center">
                 <div class="col-lg-5 pe-4">
                     <div class="testimonial-image">
-                        <img src="assets/images/travel2.png" alt="">
+                        <img src="assets/images/review.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 ps-4">
@@ -232,7 +232,7 @@ include_once("./layouts-landing/head.php");
                         <div class="col-sm-4 item">
                             <div class="testimonial-item1 rounded">
                                 <div class="author-info d-flex align-items-center mb-4">
-                                    <img src="assets/images/testimonial/img1.jpg" alt="">
+                                    <img src="assets/images/content/logo-user1.png" alt="">
                                     <div class="author-title ms-3">
                                         <h5 class="m-0 theme">Jared Erondu</h5>
                                         <span>Pengunjung</span>
@@ -249,7 +249,7 @@ include_once("./layouts-landing/head.php");
                         <div class="col-sm-4 item">
                             <div class="testimonial-item1 rounded">
                                 <div class="author-info d-flex align-items-center mb-4">
-                                    <img src="assets/images/testimonial/img1.jpg" alt="">
+                                    <img src="assets/images/content/logo-user1.png" alt="">
                                     <div class="author-title ms-3">
                                         <h5 class="m-0 theme">Jared Erondu</h5>
                                         <span>Pengunjung</span>
@@ -268,89 +268,6 @@ include_once("./layouts-landing/head.php");
             </div>
         </div>
     </section>
-
-    <!-- recent-articles starts -->
-    <section class="trending recent-articles pb-6">
-        <div class="container">
-            <div class="section-title mb-6 w-75 mx-auto text-center">
-                <h4 class="mb-1 theme1">Komentar</h4>
-                <h2 class="mb-1">Komentar <span class="theme">Terbaru</span></h2>
-            </div>
-            <div class="recent-articles-inner">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
-                            <div class="trend-image">
-                                <img src="assets/images/trending/trending10.jpg" alt="image">
-                            </div>
-                            <div class="trend-content-main p-4 pb-2">
-                                <div class="trend-content">
-                                    <h5 class="theme mb-1">Wisata Alam</h5>
-                                    <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
-                                    <p class="mb-3">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    </p>
-                                    <div class="entry-meta d-flex align-items-center justify-content-between">
-                                        <div class="entry-author mb-2">
-                                            <img src="assets/images/reviewer/2.jpg" alt="" class="rounded-circle me-1">
-                                            <span>Sollmond Nell</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
-                            <div class="trend-image">
-                                <img src="assets/images/trending/trending12.jpg" alt="image">
-                            </div>
-                            <div class="trend-content-main p-4 pb-2">
-                                <div class="trend-content">
-                                    <h5 class="theme mb-1">Wisata Sejarah</h5>
-                                    <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
-                                    <p class="mb-3">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    </p>
-                                    <div class="entry-meta d-flex align-items-center justify-content-between">
-                                        <div class="entry-author mb-2">
-                                            <img src="assets/images/reviewer/1.jpg" alt="" class="rounded-circle me-1">
-                                            <span>David Scott</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
-                            <div class="trend-image">
-                                <img src="assets/images/trending/trending13.jpg" alt="image">
-                            </div>
-                            <div class="trend-content-main p-4 pb-2">
-                                <div class="trend-content">
-                                    <h5 class="theme mb-1">Wisata Budaya</h5>
-                                    <h4><a href="detail-1.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
-                                    <p class="mb-3">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    </p>
-                                    <div class="entry-meta d-flex align-items-center justify-content-between">
-                                        <div class="entry-author mb-2">
-                                            <img src="assets/images/reviewer/3.jpg" alt="" class="rounded-circle me-1">
-                                            <span>John Bolden</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- recent-articles ends -->
 
     <?php
     include_once("./layouts-landing/footer.php");
@@ -380,6 +297,9 @@ include_once("./layouts-landing/head.php");
     <style>
         .font-desk-cat {
             font-size: 18px !important;
+        }
+        .deskrip-wisata{
+            text-align: justify;
         }
     </style>
 
