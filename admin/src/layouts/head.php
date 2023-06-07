@@ -24,4 +24,7 @@
 
     <!-- Responsive datatable examples -->
     <link href="../../../assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+     <!-- Plugins css -->
+     <link href="../../../assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 </head>

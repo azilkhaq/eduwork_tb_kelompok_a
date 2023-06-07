@@ -10,6 +10,16 @@ while ($facilities = mysqli_fetch_array($query)){
     
 }
 ?>
+<?php
+$id = $_GET['id'];
+$query = mysqli_query($koneksi, "SELECT * FROM facilities WHERE id = $id");
+?>
+
+<?php
+include('connection.php');
+$query = mysqli_query($koneksi, "SELECT * FROM tours");
+?>
+
 <?php include_once "../../layouts/head.php" ?>
 
 <body data-layout="detached" data-topbar="colored">
@@ -33,12 +43,12 @@ while ($facilities = mysqli_fetch_array($query)){
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-flex align-items-center justify-content-between">
-                                <h4 class="page-title mb-0 font-size-18">Edit Facility</h4>
+                                <h4 class="page-title mb-0 font-size-18">Edit Data Fasilitas</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Facility</a></li>
-                                        <li class="breadcrumb-item active">Edit Facility</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Fasilitas</a></li>
+                                        <li class="breadcrumb-item active">Edit Fasilitas</li>
                                     </ol>
                                 </div>
 
@@ -53,36 +63,45 @@ while ($facilities = mysqli_fetch_array($query)){
                                 <div class="card-body">
 
                                     <h4 class="card-title">Edit Data</h4>
-                                    <p class="card-title-desc">Here are examples of <code>.form-control</code> applied
-                                        to each textual HTML5 <code>&lt;input&gt;</code> <code>type</code>.</p>
                                        
                                         <form action="process_edit.php?id=<?php echo $id ?>" method="post">
+                                        <?php if (mysqli_num_rows($query) > 0) { ?>
+                                        <?php
+                                        while ($data = mysqli_fetch_array($query)) {
+                                        ?>
 
                                     <div class="mb-3 row">
-                                        <label for="example-text-input" class="col-md-2 col-form-label">Facility Name</label>
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Nama Fasilitas</label>
                                         <div class="col-md-10">
                                             <input class="form-control" type="text" id="example-text-input" value="<?php echo $facility_name; ?> ">
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
-                                        <label class="col-md-2 col-form-label">Tour ID</label>
-                                        <div class="col-md-10">
-                                            <select class="form-select" aria-label="Default select example" value="<?php echo $tour_id; ?> ">
-                                                <option selected>Select</option>
-                                                <option>Large select</option>
-                                                <option>Small select</option>
-                                            </select>
+                                            <label class="col-md-2 col-form-label">Wisata</label>
+                                            <div class="col-md-10">
+                                                <select class="form-select" aria-label="Default select example" name="tour">
+                                                    <option value="">Pilih Wisata</option>
+                                                    <?php if (mysqli_num_rows($query) > 0) { ?>
+                                                        <?php
+                                                        while ($data = mysqli_fetch_array($query)) {
+                                                        ?>
+                                                        <option value="<?= $data['id'] ?>" <?= $data['id'] == $data['category_id'] ? 'selected' : '' ?>><?= $data['name'] ?></option>
+                                                        <?php
+                                                        } ?>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
                                     <button type="button" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                    <?php
+                                    } ?>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
                         <!-- end col -->
                     </div>
                     <!-- end row -->
-
-
                 </div>
             </div>
             <!-- end main content-->
