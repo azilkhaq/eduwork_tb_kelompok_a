@@ -73,7 +73,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM tours");
                                     <div class="mb-3 row">
                                         <label for="example-text-input" class="col-md-2 col-form-label">Nama Fasilitas</label>
                                         <div class="col-md-10">
-                                            <input class="form-control" type="text" id="example-text-input" value="<?= $facilities['facility_name'] ?>">
+                                            <input class="form-control" type="text" id="example-text-input" value="<?php echo $facility_name; ?> ">
                                         </div>
                                     </div>
                                     <div class="mb-3 row">
@@ -85,25 +85,23 @@ $query = mysqli_query($koneksi, "SELECT * FROM tours");
                                                         <?php
                                                         while ($data = mysqli_fetch_array($query)) {
                                                         ?>
-                                                            <option value="<?= $data['id'] ?>"><?= $data['name'] ?></option>
+                                                        <option value="<?= $data['id'] ?>" <?= $data['id'] == $data['category_id'] ? 'selected' : '' ?>><?= $data['name'] ?></option>
                                                         <?php
-                                                        } ?>
-                                                    <?php } ?>
-                                                    <?php
                                                         } ?>
                                                     <?php } ?>
                                                 </select>
                                             </div>
                                         </div>
                                     <button type="button" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                    <?php
+                                    } ?>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
                         <!-- end col -->
                     </div>
                     <!-- end row -->
-
-
                 </div>
             </div>
             <!-- end main content-->
