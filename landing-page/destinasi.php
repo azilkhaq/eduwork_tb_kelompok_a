@@ -45,7 +45,7 @@ include_once("./layouts-landing/head.php");
                 <div class="col-lg-4">
                     <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
                         <div class="trend-image">
-                            <img src="assets/images/trending/borbudur.jpg" alt="image">
+                            <img src="assets/images/content/borbudur.jpg" alt="image">
                         </div>
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
@@ -55,9 +55,8 @@ include_once("./layouts-landing/head.php");
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 </p>
                                 <div class="entry-meta d-flex align-items-center justify-content-between">
-                                    <div class="entry-author mb-2">
-                                        <img src="assets/images/reviewer/2.jpg" alt="" class="rounded-circle me-1">
-                                        <span>Sollmond Nell</span>
+                                    <div class="entry-button d-flex align-items-centermb-2">
+                                        <a href="#" class="nir-btn" style="padding: 12px;">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +67,7 @@ include_once("./layouts-landing/head.php");
                 <div class="col-lg-4 col-md-6">
                     <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
                         <div class="trend-image">
-                            <img src="assets/images/trending/pasar-lama.png" alt="image">
+                            <img src="assets/images/content/pasar-lama.png" alt="image">
                         </div>
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
@@ -78,9 +77,8 @@ include_once("./layouts-landing/head.php");
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 </p>
                                 <div class="entry-meta d-flex align-items-center justify-content-between">
-                                    <div class="entry-author mb-2">
-                                        <img src="assets/images/reviewer/1.jpg" alt="" class="rounded-circle me-1">
-                                        <span>David Scott</span>
+                                    <div class="entry-button d-flex align-items-centermb-2">
+                                        <a href="#" class="nir-btn" style="padding: 12px;">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +89,7 @@ include_once("./layouts-landing/head.php");
                 <div class="col-lg-4 col-md-6">
                     <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
                         <div class="trend-image">
-                            <img src="assets/images/trending/kebun-bogor.jpg" alt="image">
+                            <img src="assets/images/content/kebun-bogor.jpg" alt="image">
                         </div>
                         <div class="trend-content-main p-4 pb-2">
                             <div class="trend-content">
@@ -101,9 +99,8 @@ include_once("./layouts-landing/head.php");
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 </p>
                                 <div class="entry-meta d-flex align-items-center justify-content-between">
-                                    <div class="entry-author mb-2">
-                                        <img src="assets/images/reviewer/3.jpg" alt="" class="rounded-circle me-1">
-                                        <span>John Bolden</span>
+                                    <div class="entry-button d-flex align-items-centermb-2">
+                                        <a href="#" class="nir-btn" style="padding: 12px;">Read More</a>
                                     </div>
                                 </div>
                             </div>

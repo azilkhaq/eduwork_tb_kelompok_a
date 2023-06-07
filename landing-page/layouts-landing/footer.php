@@ -23,9 +23,9 @@
                         <div class="footer-links">
                             <h3 class="white">Menu</h3>
                             <ul>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="about-us.html">Destinations</a></li>
-                                <li><a href="about-us.html">Gallery</a></li>
+                                <li><a href="about.php">Tentang Kami</a></li>
+                                <li><a href="destinasi.php">Wisata</a></li>
+                                <li><a href="gallery.php">Galeri</a></li>
                             </ul>
                         </div>
                     </div>
@@ -36,7 +36,8 @@
                                 <li><a href="about-us.html">Wisata Alam</a></li>
                                 <li><a href="about-us.html">Wisata Sejarah</a></li>
                                 <li><a href="about-us.html">Wisata Budaya</a></li>
-                                <li><a href="about-us.html">Wisata Budaya</a></li>
+                                <li><a href="about-us.html">Wisata Edukasi</a></li>
+                                <li><a href="about-us.html">Wisata Religi</a></li>
                             </ul>
                         </div>
                     </div>
