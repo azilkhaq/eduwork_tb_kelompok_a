@@ -1,8 +1,3 @@
-<?php
-include('connection.php');
-$query = mysqli_query($koneksi, "SELECT * FROM categories");
-?>
-
 <?php include_once "../../layouts/head.php" ?>
 
 <body data-layout="detached" data-topbar="colored">
@@ -30,7 +25,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM categories");
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Fasilitas</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Kategori</a></li>
                                         <li class="breadcrumb-item active">Tambah Kategori</li>
                                     </ol>
                                 </div>
@@ -45,18 +40,27 @@ $query = mysqli_query($koneksi, "SELECT * FROM categories");
                             <div class="card">
                                 <div class="card-body">
 
-                                    <h4 class="card-title pb-4">Form Tambah Kategori</h4>
+                                    <h4 class="card-title mb-4">Form Tambah Kategori</h4>
 
-                                    <form id="myForm" action="proses_tambah.php" method="POST">
+                                    <form action="./process_add.php" method="POST" enctype="multipart/form-data">
+
                                         <div class="mb-3 row">
-                                            <label for="example-text-input" class="col-md-2 col-form-label">Nama
-                                                Kategori</label>
+                                            <label for="example-text-input" class="col-md-2 col-form-label">Gambar Kategori</label>
                                             <div class="col-md-10">
-                                                <input class="form-control" type="text" name="category_name">
+                                                <input class="form-control" type="file" name="image">
                                             </div>
                                         </div>
-                                        <button type="submit"
-                                            class="btn btn-primary waves-effect waves-light">Tambah</button>
+
+                                        <div class="mb-3 row">
+                                            <label for="example-text-input" class="col-md-2 col-form-label">Nama Kategori</label>
+                                            <div class="col-md-10">
+                                                <input class="form-control" type="text" name="name">
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary waves-effect waves-light mt-5" style="float: right;">Submit</button>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
