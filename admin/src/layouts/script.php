@@ -18,6 +18,9 @@
  <script src="../../../assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
  <script src="../../../assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js"></script>
 
+ <!-- Responsive examples -->
+ <script src="../../../assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+ <script src="../../../assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
  <script src="../../../assets/js/pages/datatables.init.js"></script>
  <script src="../../../assets/js/app.js"></script>
