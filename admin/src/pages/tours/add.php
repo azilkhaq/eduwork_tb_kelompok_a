@@ -46,27 +46,15 @@ $query = mysqli_query($koneksi, "SELECT * FROM categories");
 
                                     <h4 class="card-title mb-4">Form Tambah Wisata</h4>
 
-                                    <h4 class="card-title">Gambar Wisata</h4>
-                                    <p class="card-title-desc">Upload file drag'n'drop dengan pratinjau gambar.
-                                    </p>
+                                    <form action="./process_add.php" method="POST">
 
-                                    <div class="mb-4">
-                                        <form action="#" class="dropzone dz-clickable">
-                                            <div class="fallback">
-                                                <input name="file" type="file" multiple="multiple">
-                                            </div>
-                                            <div class="dz-message needsclick">
-                                                <div class="mb-3">
-                                                    <i class="display-4 text-muted mdi mdi-upload-network-outline"></i>
-                                                </div>
+                                        <h4 class="card-title">Gambar Wisata</h4>
+                                        <p class="card-title-desc">Unggah gambar dengan pratinjau gambar.</p>
 
-                                                <h6>Drop files here or click to upload.</h6>
-                                            </div>
-                                        </form>
-                                    </div>
+                                        <div id="my-dropzone" class="dropzone mb-4"></div>
 
-                                    <form action="./process_add.php">
-                                      
+                                        <div id="container-image" style="display: none;"></div>
+
                                         <div class="mb-3 row">
                                             <label for="example-text-input" class="col-md-2 col-form-label">Nama Wisata</label>
                                             <div class="col-md-10">
@@ -132,3 +120,25 @@ $query = mysqli_query($koneksi, "SELECT * FROM categories");
 
     <?php include_once "../../layouts/script.php" ?>
 </body>
+
+<script>
+    Dropzone.autoDiscover = false;
+    var myDropzone = new Dropzone("#my-dropzone", {
+        url: "../../../helpers/upload_image.php",
+        maxFilesize: 5,
+        acceptedFiles: ".png, .jpg, .jpeg",
+        addRemoveLinks: true,
+        dictDefaultMessage: "Drop files here or click to upload",
+        success: function(file, response) {
+            var fileInput = $(`<input type='text' name='image_files[]' id='${file.upload.uuid}' value='${response.filename}'>`);
+            $("#container-image").append(fileInput);
+        },
+        error: function(file, response) {
+            console.log(response);
+        }
+    });
+
+    myDropzone.on("removedfile", function(file) {
+        $(`#${file.upload.uuid}`).remove();
+    });
+</script>

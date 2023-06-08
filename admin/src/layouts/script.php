@@ -22,5 +22,5 @@
  <script src="../../../assets/js/pages/datatables.init.js"></script>
  <script src="../../../assets/js/app.js"></script>
 
-  <!-- Plugins js -->
-  <script src="../../../assets/libs/dropzone/min/dropzone.min.js"></script>
+ <!-- Plugins js -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
