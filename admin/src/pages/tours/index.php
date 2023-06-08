@@ -1,6 +1,6 @@
 <?php
 include "../../../config/database.php";
-$query = mysqli_query($koneksi, "SELECT * FROM tours 
+$query = mysqli_query($koneksi, "SELECT *, tours.id as tourId  FROM tours 
 LEFT JOIN categories ON tours.category_id = categories.id");
 ?>
 <?php include_once "../../layouts/head.php" ?>
@@ -45,7 +45,7 @@ LEFT JOIN categories ON tours.category_id = categories.id");
                             <div class="card">
                                 <div class="card-body">
                                     <a href="./add.php" class="btn btn-primary waves-effect waves-light">
-                                        <i class="bx bxs-add-to-queue font-size-16 align-middle me-2"></i> Add Tours
+                                        <i class="bx bxs-add-to-queue font-size-16 align-middle me-2"></i> Tambah Wisata
                                     </a>
                                 </div>
                             </div>
@@ -75,13 +75,13 @@ LEFT JOIN categories ON tours.category_id = categories.id");
                                                 ?>
                                                     <tr>
                                                         <td><?= $no ?></td>
-                                                        <td><?= $data['category_name'] ?></td>
                                                         <td><?= $data['name'] ?></td>
-                                                        <td></td>
-                                                        <td></td>
+                                                        <td><?= $data['category_name'] ?></td>
+                                                        <td><?= mb_strimwidth($data['description'], 0, 30, '...') ?></td>
+                                                        <td><?= mb_strimwidth($data['address'], 0, 30, '...') ?></td>
                                                         <td>
-                                                            <a href="edit.php?id=<?= $data["id"] ?>" class="btn btn-warning btn-sm">Edit</a>
-                                                            <a href="core/process_delete.php?id=<?= $data["id"] ?>" class="btn btn-danger btn-sm">Delete</a>
+                                                            <a href="edit.php?id=<?= $data["tourId"] ?>" class="btn btn-warning btn-sm"><i class="bx bx-edit-alt font-size-16 align-middle me-1"></i>Ubah</a>
+                                                            <a href="process_delete.php?id=<?= $data["tourId"] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin dihapus')"><i class="bx bx-trash-alt font-size-16 align-middle me-1"></i>Hapus</a>
                                                         </td>
                                                     </tr>
                                                 <?php $no++;

@@ -4,7 +4,7 @@
 
         <div class="user-wid text-center py-4">
             <div class="user-img">
-                <img src="../../../assets/images/users/avatar-2.jpg" alt="" class="avatar-md mx-auto rounded-circle">
+                <img src="../../../assets/images/programmer.png" alt="" class="avatar-md mx-auto rounded-circle">
             </div>
 
             <div class="mt-3">
@@ -22,7 +22,7 @@
                 <li class="menu-title">Menu</li>
                 <li>
                     <a href="../tours" class="waves-effect">
-                        <i class="mdi mdi-airplane"></i>
+                        <i class="bx bx-home-alt"></i>
                         <span>Wisata</span>
                     </a>
                 </li>
