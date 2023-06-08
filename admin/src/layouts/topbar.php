@@ -31,14 +31,14 @@
 
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded-circle header-profile-user" src="../../../assets/images/users/avatar-2.jpg" alt="Header Avatar">
+                        <img class="rounded-circle header-profile-user" src="../../../assets/images/programmer.png" alt="Header Avatar">
                         <span class="d-none d-xl-inline-block ms-1">Admin</span>
-                        <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        <!-- <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i> -->
                     </button>
-                    <div class="dropdown-menu dropdown-menu-end">
+                    <!-- <div class="dropdown-menu dropdown-menu-end">
                         <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
                             Logout</a>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
@@ -47,19 +47,19 @@
                 <div class="navbar-brand-box">
                     <a href="index.html" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="../../../assets/images/logo-sm.png" alt="" height="20">
+                            TRAVELIN ADMIN
                         </span>
                         <span class="logo-lg">
-                            <img src="../../../assets/images/logo-dark.png" alt="" height="17">
+                            TRAVELIN ADMIN
                         </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                         <span class="logo-sm">
-                            <img src="../../../assets/images/logo-sm.png" alt="" height="20">
+                            TRAVELIN ADMIN
                         </span>
                         <span class="logo-lg">
-                            <img src="../../../assets/images/logo-light.png" alt="" height="19">
+                            TRAVELIN ADMIN
                         </span>
                     </a>
                 </div>
@@ -68,3 +68,11 @@
         </div>
     </div>
 </header>
+<style>
+    .logo {
+        color: white;
+        line-height: 70px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+</style>
