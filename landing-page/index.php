@@ -31,8 +31,7 @@ $queryComment  = mysqli_query($koneksi, "SELECT * FROM comments as a LEFT JOIN t
                         <div class="banner-content text-lg-start text-center">
                             <h4 class="theme mb-0">Jelajahi Seluruh Dunia</h4>
                             <h1>Rencanakan Liburan Impianmu!</h1>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore</p>
+                            <p class="mb-4">Temukan wisata-wisata impianmu disini dan buat pengalamanmu yang menakjubkan.</p>
 
                         </div>
                     </div>
