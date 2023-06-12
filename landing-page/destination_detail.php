@@ -1,5 +1,11 @@
 <?php
 include_once("./layouts-landing/head.php");
+
+include "./config/database.php";
+
+$id = $_GET['id'];
+
+$queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_description, a.id as tour_id  FROM tours as a LEFT JOIN categories as b ON a.category_id = b.id WHERE a.id = $id");
 ?>
 
 <body>
@@ -39,154 +45,190 @@ include_once("./layouts-landing/head.php");
     <section class="trending pt-6 pb-0 bg-lgrey">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="single-content">
-                        <div id="highlight" class="mb-4">
-                            <div class="single-full-title border-b mb-2 pb-2">
-                                <div class="single-title">
-                                    <h2 class="mb-1">Borobudur - Yogyakarta</h2>
-                                    <div class="rating-main d-flex align-items-center">
-                                        <p class="mb-0 me-2"><i class="icon-location-pin"></i> Yogyakarta</p>
-                                        <div class="rating me-2">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
+
+                <?php if (mysqli_num_rows($queryWisata) > 0) { ?>
+                    <?php
+                    while ($data = mysqli_fetch_array($queryWisata)) {
+
+                        $queryImage  = mysqli_query($koneksi, "SELECT * FROM tour_images WHERE tour_id = " . $data['tour_id'] . " LIMIT 1");
+                        $image = "";
+                        if (mysqli_num_rows($queryImage) > 0) {
+                            while ($dataImage = mysqli_fetch_array($queryImage)) {
+                                $image = $dataImage['image'];
+                            }
+                        }
+
+                        $queryGallery  = mysqli_query($koneksi, "SELECT * FROM tour_images WHERE tour_id = " . $data['tour_id'] . "");
+                        $gallery = [];
+                        if (mysqli_num_rows($queryGallery) > 0) {
+                            while ($dataGallery = mysqli_fetch_array($queryGallery)) {
+                                array_push($gallery, $dataGallery['image']);
+                            }
+                        }
+
+                        $queryFasilitas  = mysqli_query($koneksi, "SELECT * FROM facilities WHERE tour_id = " . $data['tour_id'] . "");
+                        $fasilitas = [];
+                        if (mysqli_num_rows($queryFasilitas) > 0) {
+                            while ($dataFasilitas = mysqli_fetch_array($queryFasilitas)) {
+                                array_push($fasilitas, $dataFasilitas['facility_name']);
+                            }
+                        }
+                    ?>
+
+                        <div class="col-lg-8">
+                            <div class="single-content">
+                                <div id="highlight" class="mb-4">
+                                    <div class="single-full-title border-b mb-2 pb-2">
+                                        <div class="single-title">
+                                            <h2 class="mb-1"><?= $data['name'] ?></h2>
+                                            <div class="rating-main d-flex align-items-center">
+                                                <p class="mb-0 me-2"><i class="icon-location-pin"></i> Kudus</p>
+                                                <div class="rating me-2">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                </div>
+                                                <span>(2 Review)</span>
+                                            </div>
                                         </div>
-                                        <span>(1,186 Review)</span>
+                                    </div>
+
+                                    <div class="description-images mb-4">
+                                        <img src="../uploads/<?= $image ?>" alt="" class="w-100 rounded">
+                                    </div>
+
+                                    <div class="description mb-2">
+                                        <h4>Deskripsi</h4>
+                                        <p><?= $data['tour_description'] ?></p>
+                                    </div>
+
+                                    <div class="description mb-2">
+                                        <h4>Fasilitas</h4>
+                                        <ul>
+                                            <?php foreach ($fasilitas as $value) { ?>
+                                                <li><?= $value ?></li><br>
+                                            <?php } ?>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="description-images mb-4">
-                                <img src="assets/images/content/borbudur.jpg" alt="" class="w-100 rounded">
-                            </div>
-
-                            <div class="description mb-2">
-                                <h4>Deskripsi</h4>
-                                <p>Borobudur adalah candi Buddha terbesar di dunia dan merupakan Situs Warisan Dunia UNESCO. Terletak di dekat Yogyakarta, candi ini memiliki relief yang indah dan menampilkan kebudayaan Buddha.</p>
-                            </div>
-
-                            <div class="description mb-2">
-                                <h4>Fasilitas</h4>
-                                <ul>
-                                    <li>Kamar Mandi</li><br>
-                                    <li>Smoke Room</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="description mb-2">
-                            <h4 class="mb-2">Galeri</h4>
-                            <div class="services-image d-md-flex">
-                                <div class="me-md-2 rounded overflow-hidden mb-2"><img src="assets/images/trending/trending5.jpg" alt="" class="w-100"></div>
-                                <div class="ms-md-2 rounded overflow-hidden mb-2"><img src="assets/images/trending/trending6.jpg" alt="" class="w-100"></div>
-                            </div>
-                        </div>
-
-                        <div id="single-map" class="single-map mb-4">
-                            <h4>Lokasi</h4>
-                            <div class="map rounded overflow-hidden">
-                                <div style="width: 100%">
-                                    <iframe class=" rounded overflow-hidden" height="400"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63274.38201573587!2d110.15826778824832!3d-7.613131978595187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cef5e6c0f59%3A0x4027a76e352eb60!2sKec.%20Borobudur%2C%20Kabupaten%20Magelang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1685958705159!5m2!1sid!2sid"></iframe>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- blog review -->
-                        <div id="single-add-review" class="single-add-review" style="margin-top: 10px;">
-                            <h4>Review</h4>
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group mb-2">
-                                            <input type="text" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group mb-2">
-                                            <input type="email" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group mb-2">
-                                            <textarea>Comment</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-btn">
-                                            <a href="#" class="nir-btn">Submit</a>
-                                        </div>
+                                <div class="description mb-2">
+                                    <h4 class="mb-2">Galeri</h4>
+                                    <div class="services-image d-md-flex">
+                                        <?php foreach ($gallery as $value) { ?>
+                                            <div class="me-md-2 rounded overflow-hidden mb-2"><img src="../uploads/<?= $value ?>" alt="" class="w-100"></div>
+                                        <?php } ?>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- sidebar starts -->
-                <div class="col-lg-4">
-                    <div class="sidebar-sticky">
-                        <div class="popular-post sidebar-item mb-4">
-                            <div class="sidebar-tabs">
-                                <div class="post-tabs">
-                                    <!-- tab navs -->
-                                    <h4 class="">Wisata Serupa</h4>
-                                    <!-- tab contents -->
-                                    <div class="tab-content" id="postsTabContent1">
-                                        <!-- popular posts -->
-                                        <div aria-labelledby="popular-tab" class="tab-pane fade active show" id="popular" role="tabpanel">
-                                            <article class="post mb-2 border-b pb-2">
-                                                <div class="s-content d-flex align-items-center justify-space-between">
-                                                    <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/content/borbudur.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">Borobudur - Yogyakarta</a></h5>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <article class="post border-b pb-2 mb-2">
-                                                <div class="s-content d-flex align-items-center justify-space-between">
-                                                    <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/content/pasar-lama.png" alt=""></a>
-                                                    </div>
-                                                    <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">Pasar Lama - Tanggerang</a></h5>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <article class="post mb-2 border-b pb-2">
-                                                <div class="s-content d-flex align-items-center justify-space-between">
-                                                    <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/content/tirta-gangga.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">Istana Tirta Gangga - Bali</a></h5>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <article class="post">
-                                                <div class="s-content d-flex align-items-center justify-space-between">
-                                                    <div class="sidebar-image w-25 me-3 rounded">
-                                                        <a href="detail-1.html"><img src="assets/images/content/kebun-bogor.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="content-list w-75">
-                                                        <h5 class="mb-1"><a href="detail-1.html">Kebun Raya - Bogor</a></h5>
-                                                    </div>
-                                                </div>
-                                            </article>
+                                <div id="single-map" class="single-map mb-4">
+                                    <h4>Lokasi</h4>
+                                    <div class="map rounded overflow-hidden">
+                                        <div style="width: 100%">
+                                            <iframe class=" rounded overflow-hidden" height="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63274.38201573587!2d110.15826778824832!3d-7.613131978595187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cef5e6c0f59%3A0x4027a76e352eb60!2sKec.%20Borobudur%2C%20Kabupaten%20Magelang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1685958705159!5m2!1sid!2sid"></iframe>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- blog review -->
+                                <div id="single-add-review" class="single-add-review" style="margin-top: 10px;">
+                                    <h4>Review</h4>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-2">
+                                                    <input type="text" placeholder="Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-2">
+                                                    <input type="email" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group mb-2">
+                                                    <textarea>Comment</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-btn">
+                                                    <a href="#" class="nir-btn">Submit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+
+                        <!-- sidebar starts -->
+                        <div class="col-lg-4">
+                            <div class="sidebar-sticky">
+                                <div class="popular-post sidebar-item mb-4">
+                                    <div class="sidebar-tabs">
+                                        <div class="post-tabs">
+                                            <!-- tab navs -->
+                                            <h4 class="">Wisata Serupa</h4>
+                                            <!-- tab contents -->
+                                            <div class="tab-content" id="postsTabContent1">
+                                                <!-- popular posts -->
+                                                <div aria-labelledby="popular-tab" class="tab-pane fade active show" id="popular" role="tabpanel">
+                                                    <article class="post mb-2 border-b pb-2">
+                                                        <div class="s-content d-flex align-items-center justify-space-between">
+                                                            <div class="sidebar-image w-25 me-3 rounded">
+                                                                <a href="detail-1.html"><img src="assets/images/content/borbudur.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="content-list w-75">
+                                                                <h5 class="mb-1"><a href="detail-1.html">Borobudur - Yogyakarta</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+
+                                                    <article class="post border-b pb-2 mb-2">
+                                                        <div class="s-content d-flex align-items-center justify-space-between">
+                                                            <div class="sidebar-image w-25 me-3 rounded">
+                                                                <a href="detail-1.html"><img src="assets/images/content/pasar-lama.png" alt=""></a>
+                                                            </div>
+                                                            <div class="content-list w-75">
+                                                                <h5 class="mb-1"><a href="detail-1.html">Pasar Lama - Tanggerang</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+
+                                                    <article class="post mb-2 border-b pb-2">
+                                                        <div class="s-content d-flex align-items-center justify-space-between">
+                                                            <div class="sidebar-image w-25 me-3 rounded">
+                                                                <a href="detail-1.html"><img src="assets/images/content/tirta-gangga.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="content-list w-75">
+                                                                <h5 class="mb-1"><a href="detail-1.html">Istana Tirta Gangga - Bali</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+
+                                                    <article class="post">
+                                                        <div class="s-content d-flex align-items-center justify-space-between">
+                                                            <div class="sidebar-image w-25 me-3 rounded">
+                                                                <a href="detail-1.html"><img src="assets/images/content/kebun-bogor.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="content-list w-75">
+                                                                <h5 class="mb-1"><a href="detail-1.html">Kebun Raya - Bogor</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php
+                    } ?>
+                <?php } ?>
             </div>
         </div>
     </section>
