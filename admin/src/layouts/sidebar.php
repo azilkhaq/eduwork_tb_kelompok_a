@@ -38,6 +38,12 @@
                         <span>Fasilitas</span>
                     </a>
                 </li>
+                <li>
+                    <a href="../suggestion" class="waves-effect">
+                        <i class="mdi mdi-message-processing-outline"></i>
+                        <span>Kritik & Saran</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->
