@@ -45,7 +45,7 @@ include_once("./layouts-landing/head.php");
                         <div class="about-content text-center text-lg-start">
                             <h4 class="theme d-inline-block mb-0">Tentang Kami</h4>
                             <h2 class="border-b mb-2 pb-1">Telusuri wisata impianmu bersama Travelin.</h2>
-                            <p class="border-b mb-2 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p class="border-b mb-2 pb-2">Travelin bergerak dalam industri perjalanan wisata, travelin di dirikan pada tahun 2023. Travelin berkomitmen untuk melakukan wisata dengan aman dan nyaman, travelin memiliki team yang profesional, berkomitmen.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4 pe-4">
@@ -71,7 +71,7 @@ include_once("./layouts-landing/head.php");
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list rounded">
                             <div class="team-image">
-                                <img src="assets/images/team/img1.jpg" alt="team">
+                                <img src="assets/images/team/azil.jpg" alt="team">
                             </div>
                             <div class="team-content text-center p-3 bg-theme">
                                 <h4 class="mb-0 white">Azil Khaq</h4>
@@ -83,7 +83,7 @@ include_once("./layouts-landing/head.php");
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list rounded">
                             <div class="team-image">
-                                <img src="assets/images/team/img2.jpg" alt="team">
+                                <img src="assets/images/team/intan.jpg" alt="team">
                             </div>
                             <div class="team-content text-center p-3 bg-theme">
                                 <h4 class="mb-0 white">Intan Mariyahsari</h4>
@@ -95,7 +95,7 @@ include_once("./layouts-landing/head.php");
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list rounded">
                             <div class="team-image">
-                                <img src="assets/images/team/img4.jpg" alt="team">
+                                <img src="assets/images/team/nihaya.jpg" alt="team">
                             </div>
                             <div class="team-content text-center p-3 bg-theme">
                                 <h4 class="mb-0 white">Nihayatun</h4>
@@ -107,7 +107,7 @@ include_once("./layouts-landing/head.php");
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list rounded">
                             <div class="team-image">
-                                <img src="assets/images/team/img3.jpg" alt="team">
+                                <img src="assets/images/team/badri.JPG" alt="team">
                             </div>
                             <div class="team-content text-center p-3 bg-theme">
                                 <h4 class="mb-0 white">Badry Ali Mustofa</h4>

@@ -1,3 +1,10 @@
+<?php
+include_once("./layouts-landing/head.php");
+include "./config/database.php";
+
+$queryCategory  = mysqli_query($koneksi, "SELECT * FROM categories");
+
+?>
  <!-- footer starts -->
  <footer class="pt-20 pb-4" style="background-image: url(assets/images/background_pattern.png);">
         <div class="section-shape top-0" style="background-image: url(assets/images/shape8.png);"></div>
@@ -8,15 +15,14 @@
                         <div class="footer-about">
                             <img src="assets/images/logo-white.png" alt="">
                             <p class="mt-3 mb-3 white">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio suspendisse leo neque
-                                iaculis molestie sagittis maecenas aenean eget molestie sagittis.
+                            Temukan wisata-wisata impianmu disini dan buat pengalamanmu yang menakjubkan.
                             </p>
-                            <ul>
+                            <!-- <ul>
                                 <li class="white"><strong>Whatsapp:</strong> +47-252-254-2542</li>
                                 <li class="white"><strong>Location:</strong> Jakarta, Indonesia</li>
                                 <li class="white"><strong>Email:</strong> info@Travelin.com</li>
                                 <li class="white"><strong>Website:</strong> www.Travelin.com</li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-12 mb-4">
@@ -32,13 +38,15 @@
                     <div class="col-lg-2 col-md-6 col-sm-12 mb-4">
                         <div class="footer-links">
                             <h3 class="white">Kategori</h3>
+                            <?php if (mysqli_num_rows($queryCategory) > 0) { ?>
+                            <?php
+                            while ($data = mysqli_fetch_array($queryCategory)) {
+                            ?>
                             <ul>
-                                <li><a href="about-us.html">Wisata Alam</a></li>
-                                <li><a href="about-us.html">Wisata Sejarah</a></li>
-                                <li><a href="about-us.html">Wisata Budaya</a></li>
-                                <li><a href="about-us.html">Wisata Edukasi</a></li>
-                                <li><a href="about-us.html">Wisata Religi</a></li>
+                                <li><a href="destinasi.php"><?= $data['category_name'] ?></a></li>
                             </ul>
+                            <?php }
+                        } ?>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
