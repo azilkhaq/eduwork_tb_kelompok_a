@@ -1,5 +1,9 @@
 <?php
 include_once("./layouts-landing/head.php");
+
+include "./config/database.php";
+
+$queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_description, a.id as tour_id  FROM tours as a LEFT JOIN categories as b ON a.category_id = b.id");
 ?>
 
 <body>
@@ -24,7 +28,7 @@ include_once("./layouts-landing/head.php");
                     <h1 class="mb-3">Wisata</h1>
                     <nav aria-label="breadcrumb" class="d-block">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Wisata</li>
                         </ul>
                     </nav>
@@ -42,71 +46,55 @@ include_once("./layouts-landing/head.php");
                 <h2 class="mb-1">Daftar <span class="theme">Wisata</span></h2>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
-                        <div class="trend-image">
-                            <img src="assets/images/content/borbudur.jpg" alt="image">
-                        </div>
-                        <div class="trend-content-main p-4 pb-2">
-                            <div class="trend-content">
-                                <h5 class="theme mb-1">Wisata Alam</h5>
-                                <h4><a href="destination_detail.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
-                                <p class="mb-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                </p>
-                                <div class="entry-meta d-flex align-items-center justify-content-between">
-                                    <div class="entry-button d-flex align-items-centermb-2">
-                                        <a href="#" class="nir-btn" style="padding: 12px;">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
-                        <div class="trend-image">
-                            <img src="assets/images/content/pasar-lama.png" alt="image">
-                        </div>
-                        <div class="trend-content-main p-4 pb-2">
-                            <div class="trend-content">
-                                <h5 class="theme mb-1">Wisata Sejarah</h5>
-                                <h4><a href="destination_detail.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
-                                <p class="mb-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                </p>
-                                <div class="entry-meta d-flex align-items-center justify-content-between">
-                                    <div class="entry-button d-flex align-items-centermb-2">
-                                        <a href="#" class="nir-btn" style="padding: 12px;">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php if (mysqli_num_rows($queryWisata) > 0) { ?>
+                    <?php
+                    while ($data = mysqli_fetch_array($queryWisata)) {
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
-                        <div class="trend-image">
-                            <img src="assets/images/content/kebun-bogor.jpg" alt="image">
-                        </div>
-                        <div class="trend-content-main p-4 pb-2">
-                            <div class="trend-content">
-                                <h5 class="theme mb-1">Wisata Budaya</h5>
-                                <h4><a href="destination_detail.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h4>
-                                <p class="mb-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                </p>
-                                <div class="entry-meta d-flex align-items-center justify-content-between">
-                                    <div class="entry-button d-flex align-items-centermb-2">
-                                        <a href="#" class="nir-btn" style="padding: 12px;">Read More</a>
+                        $queryImage  = mysqli_query($koneksi, "SELECT * FROM tour_images WHERE tour_id = " . $data['tour_id'] . " LIMIT 1");
+
+                        $image = "";
+                        if (mysqli_num_rows($queryImage) > 0) {
+                            while ($dataImage = mysqli_fetch_array($queryImage)) {
+                                $image = $dataImage['image'];
+                            }
+                        }
+                    ?>
+
+                        <div class="col-lg-4">
+                            <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
+                                <div class="trend-image">
+                                    <img src="../uploads/<?= $image ?>" alt="image">
+                                </div>
+                                <div class="trend-content-main p-4 pb-2">
+                                    <div class="trend-content">
+                                        <h5 class="theme mb-1"><?= $data['category_name'] ?></h5>
+                                        <h4><a href="destination_detail.php"><?= $data['name'] ?></a></h4>
+                                        <div class="rating-main d-flex align-items-center pb-2">
+                                            <div class="rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-3">
+                                            <?= mb_strimwidth($data['tour_description'], 0, 230, '...') ?>
+                                        </p>
+                                        <div class="entry-meta d-flex align-items-center justify-content-between">
+                                            <div class="entry-button d-flex align-items-centermb-2">
+                                                <a href="./destination_detail.php?id=<?= $data['tour_id'] ?>" class="nir-btn" style="padding: 12px;">Selengkapnya</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+
+                    <?php
+                    } ?>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -115,136 +103,8 @@ include_once("./layouts-landing/head.php");
 
     <?php
     include_once("./layouts-landing/footer.php");
-    ?>
 
-    <!-- Back to top start -->
-    <div id="back-to-top">
-        <a href="#"></a>
-    </div>
-    <!-- Back to top ends -->
-
-    <!-- search popup -->
-    <div id="search1">
-        <button type="button" class="close">×</button>
-        <form>
-            <input type="search" value="" placeholder="type keyword(s) here" />
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
-    </div>
-
-    <!-- login registration modal -->
-    <div class="modal fade log-reg" id="exampleModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="post-tabs">
-                        <!-- tab navs -->
-                        <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button aria-controls="login" aria-selected="false" class="nav-link active" data-bs-target="#login" data-bs-toggle="tab" id="login-tab" role="tab" type="button">Login</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button aria-controls="register" aria-selected="true" class="nav-link" data-bs-target="#register" data-bs-toggle="tab" id="register-tab" role="tab" type="button">Register</button>
-                            </li>
-                        </ul>
-                        <!-- tab contents -->
-                        <div class="tab-content blog-full" id="postsTabContent">
-                            <!-- popular posts -->
-                            <div aria-labelledby="login-tab" class="tab-pane fade active show" id="login" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="blog-image rounded">
-                                            <a href="#" style="background-image: url(assets/images/trending/trending5.jpg);"></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h4 class="text-center border-b pb-2">Login</h4>
-                                        <div class="log-reg-button d-flex align-items-center justify-content-between">
-                                            <button type="submit" class="btn btn-fb">
-                                                <i class="fab fa-facebook"></i> Login with Facebook
-                                            </button>
-                                            <button type="submit" class="btn btn-google">
-                                                <i class="fab fa-google"></i> Login with Google
-                                            </button>
-                                        </div>
-                                        <hr class="log-reg-hr position-relative my-4 overflow-visible">
-                                        <form method="post" action="#" name="contactform" id="contactform">
-                                            <div class="form-group mb-2">
-                                                <input type="text" name="user_name" class="form-control" id="fname" placeholder="User Name or Email Address">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="password" name="password_name" class="form-control" id="lpass" placeholder="Password">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="checkbox" class="custom-control-input" id="exampleCheck">
-                                                <label class="custom-control-label mb-0" for="exampleCheck1">Remember
-                                                    me</label>
-                                                <a class="float-end" href="#">Lost your password?</a>
-                                            </div>
-                                            <div class="comment-btn mb-2 pb-2 text-center border-b">
-                                                <input type="submit" class="nir-btn w-100" id="submit" value="Login">
-                                            </div>
-                                            <p class="text-center">Don't have an account? <a href="#" class="theme">Register</a></p>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Recent posts -->
-                            <div aria-labelledby="register-tab" class="tab-pane fade" id="register" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="blog-image rounded">
-                                            <a href="#" style="background-image: url(assets/images/trending/trending5.jpg);"></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <h4 class="text-center border-b pb-2">Register</h4>
-                                        <div class="log-reg-button d-flex align-items-center justify-content-between">
-                                            <button type="submit" class="btn btn-fb">
-                                                <i class="fab fa-facebook"></i> Login with Facebook
-                                            </button>
-                                            <button type="submit" class="btn btn-google">
-                                                <i class="fab fa-google"></i> Login with Google
-                                            </button>
-                                        </div>
-                                        <hr class="log-reg-hr position-relative my-4 overflow-visible">
-                                        <form method="post" action="#" name="contactform1" id="contactform1">
-                                            <div class="form-group mb-2">
-                                                <input type="text" name="user_name" class="form-control" id="fname1" placeholder="User Name">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="text" name="user_name" class="form-control" id="femail" placeholder="Email Address">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="password" name="password_name" class="form-control" id="lpass1" placeholder="Password">
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                <input type="password" name="password_name" class="form-control" id="lrepass" placeholder="Re-enter Password">
-                                            </div>
-                                            <div class="form-group mb-2 d-flex">
-                                                <input type="checkbox" class="custom-control-input" id="exampleCheck1">
-                                                <label class="custom-control-label mb-0 ms-1 lh-1" for="exampleCheck1">I
-                                                    have read and accept the Terms and Privacy Policy?</label>
-                                            </div>
-                                            <div class="comment-btn mb-2 pb-2 text-center border-b">
-                                                <input type="submit" class="nir-btn w-100" id="submit1" value="Register">
-                                            </div>
-                                            <p class="text-center">Already have an account? <a href="#" class="theme">Login</a></p>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <?php
     include_once("./layouts-landing/script.php");
     ?>
 
 </body>
-
-</html>
