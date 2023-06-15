@@ -35,10 +35,10 @@
                         <span class="d-none d-xl-inline-block ms-1">Admin</span>
                         <!-- <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i> -->
                     </button>
-                    <!-- <div class="dropdown-menu dropdown-menu-end">
-                        <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item text-danger" href="../../../../landing-page"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
                             Logout</a>
-                    </div> -->
+                    </div>
                 </div>
 
             </div>
