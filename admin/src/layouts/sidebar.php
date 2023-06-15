@@ -21,6 +21,12 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Menu</li>
                 <li>
+                    <a href="../user/user.php" class="waves-effect">
+                        <i class="bx bx-user"></i>
+                        <span>User</span>
+                    </a>
+                </li>
+                <li>
                     <a href="../tours" class="waves-effect">
                         <i class="bx bx-home-alt"></i>
                         <span>Wisata</span>
