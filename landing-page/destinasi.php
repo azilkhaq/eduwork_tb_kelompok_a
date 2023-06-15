@@ -169,9 +169,7 @@ $jumlah_data_paginate = mysqli_num_rows($queryWisata);
                                 <img src="./assets/images/empty.jpg" width="350" alt="">
                                 <br /><span>Data Tidak di Temukan</span>
                             </center>
-                        <? } ?>
-
-
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -179,7 +177,6 @@ $jumlah_data_paginate = mysqli_num_rows($queryWisata);
     </section>
 
     <?php
-    include_once("./layouts-landing/modal.php");
     include_once("./layouts-landing/footer.php");
 
     include_once("./layouts-landing/script.php");
