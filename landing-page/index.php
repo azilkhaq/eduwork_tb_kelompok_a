@@ -4,7 +4,13 @@ include "./config/database.php";
 
 $queryCategory  = mysqli_query($koneksi, "SELECT * FROM categories");
 
-$queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_description, a.id as tour_id  FROM tours as a LEFT JOIN categories as b ON a.category_id = b.id");
+$queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_description, a.id as tour_id, AVG(rating) AS average_rating
+FROM tours as a 
+LEFT JOIN categories as b ON a.category_id = b.id
+LEFT JOIN comments as c ON a.id = c.tour_id
+GROUP BY a.id, a.name
+ORDER BY average_rating DESC
+LIMIT 3;");
 
 $queryComment  = mysqli_query($koneksi, "SELECT * FROM comments as a LEFT JOIN tours as b ON a.tour_id = b.id");
 ?>
@@ -50,10 +56,12 @@ $queryComment  = mysqli_query($koneksi, "SELECT * FROM comments as a LEFT JOIN t
                             ?>
                                 <div class="col-lg-3 col-md-6 my-4">
                                     <div class="category-item box-shadow p-3 py-4 text-center bg-white rounded overflow-hidden">
-                                        <div class="trending-topic-content">
-                                            <img src="../uploads/<?= $data['image'] ?>" class="mb-1 d-inline-block" alt="">
-                                            <h4 class="mb-0 font-desk-cat"><a href="tour-grid.html"><?= $data['category_name'] ?></a></h4>
-                                        </div>
+                                        <a href="destinasi.php?category=<?= $data['id'] ?>">
+                                            <div class="trending-topic-content">
+                                                <img src="../uploads/<?= $data['image'] ?>" class="mb-1 d-inline-block" alt="">
+                                                <h4 class="mb-0 font-desk-cat"><a href="tour-grid.html"><?= $data['category_name'] ?></a></h4>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             <?php
@@ -96,7 +104,7 @@ $queryComment  = mysqli_query($koneksi, "SELECT * FROM comments as a LEFT JOIN t
                         ?>
                             <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
                                 <div class="trend-item rounded box-shadow">
-                                    <div class="trend-image position-relative">
+                                    <div class="trend-image position-relative" style="height: 276px;">
                                         <img src="../uploads/<?= $image ?>" alt="image" class="">
                                         <div class="color-overlay"></div>
                                     </div>
@@ -110,17 +118,17 @@ $queryComment  = mysqli_query($koneksi, "SELECT * FROM comments as a LEFT JOIN t
                                         <h3 class="mb-1"><a href="tour-grid.html"><?= $data['name'] ?></a></h3>
                                         <div class="rating-main d-flex align-items-center pb-2">
                                             <div class="rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
+                                                <div class="rating me-2">
+                                                    <?php for ($i = 0; $i < intval($data['average_rating']); $i++) { ?>
+                                                        <span class="fa fa-star checked"></span>
+                                                    <?php } ?>
+                                                </div>
                                             </div>
                                         </div>
-                                        <p class=" border-b pb-2 mb-2 deskrip-wisata"><?= mb_strimwidth($data['tour_description'], 0, 200, '...') ?></p>
+                                        <p class=" border-b pb-2 mb-2 deskrip-wisata"><?= mb_strimwidth($data['tour_description'], 0, 150, '...') ?></p>
                                         <div class="entry-meta">
                                             <div class="entry-author d-flex align-items-center">
-                                                <a href="./destination_detail.php">
+                                                <a href="./destination_detail.php?id=<?= $data['tour_id'] ?>">
                                                     <p class="mb-0"><span class="theme fw-bold fs-5"> Selengkapnya</span>
                                                     </p>
                                                 </a>
@@ -200,7 +208,43 @@ $queryComment  = mysqli_query($koneksi, "SELECT * FROM comments as a LEFT JOIN t
         </form>
     </div>
 
-
+    <div class="modal fade log-reg" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="post-tabs">
+                        <!-- tab contents -->
+                        <div class="tab-content blog-full" id="postsTabContent">
+                            <!-- popular posts -->
+                            <div aria-labelledby="login-tab" class="tab-pane fade active show" id="login" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="blog-image rounded">
+                                            <a href="#" style="background-image: url(assets/images/login.jpg);"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 pb-10 pt-10">
+                                        <h4 class="text-center border-b pb-2">Login</h4>
+                                        <form method="post" action="process_login.php" name="contactform" id="contactform">
+                                            <div class="form-group mb-2">
+                                                <input type="email" name="email" class="form-control" id="fname" placeholder="Email">
+                                            </div>
+                                            <div class="form-group mb-2">
+                                                <input type="password" name="password" class="form-control" id="lpass" placeholder="Password">
+                                            </div>
+                                            <div class="comment-btn mb-2 pb-2 text-center border-b">
+                                                <input type="submit" class="nir-btn w-100" id="submit" value="Login">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?php
     include_once("./layouts-landing/script.php");

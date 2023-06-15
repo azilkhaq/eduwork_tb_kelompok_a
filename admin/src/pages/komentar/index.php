@@ -26,7 +26,7 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Komentar</a></li>
-                                        <li class="breadcrumb-item active">Komentar</li>
+                                        <li class="breadcrumb-item active">Data Komentar</li>
                                     </ol>
                                 </div>
 
@@ -37,49 +37,37 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Komentar</h4>
+                            <h4 class="card-title pb-4">Data Komentar</h4>
 
-                            <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Full Name</th>
-                                        <th>Note</th>
+                                        <th>No</th>
+                                        <th>Wisata</th>
+                                        <th>Nama</th>
+                                        <th>Email</th>
                                         <th>Rating</th>
-                                        <th>Action</th>
+                                        <th>Note</th>
+                                        <th>Tanggal</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     $i = 0;
                                     include('./koneksi.php');
-                                    $query = mysqli_query($conn, "SELECT * FROM comments");
+                                    $query = mysqli_query($conn, "SELECT * FROM comments LEFT JOIN tours ON comments.tour_id = tours.id");
                                     while ($data = mysqli_fetch_array($query)) {
                                         $i++;
-                                        ?>
-                                    <tr>
-                                        <td>
-                                            <?php echo $i ?>
-                                        </td>
-                                        <td>
-                                            <img src="../../../../uploads/<?= $data['image'] ?>" width="130"
-                                                height="130" alt="image">
-                                        </td>
-                                        <td>
-                                            <?php echo $data['id'] ?>
-                                            <?php echo $data['fullname'] ?>
-                                            <?php echo $data['note'] ?>
-                                            <?php echo $data['rating'] ?>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-warning btn-sm" href="edit.php?id=<?= $data['id']; ?>"> <i
-                                                    class="bx bx-edit-alt font-size-16 align-middle me-1"></i>Ubah</a>
-                                            <a class="btn btn-danger btn-sm"
-                                                href="process_delete.php?id=<?= $data['id']; ?> "
-                                                onclick="return confirm('Yakin dihapus')"><i
-                                                    class="bx bx-trash-alt font-size-16 align-middle me-1"></i>Hapus</a>
-                                    </tr>
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $i ?></td>
+                                            <td><?php echo $data['name'] ?></td>
+                                            <td><?php echo $data['fullname'] ?></td>
+                                            <td><?php echo $data['email'] ?></td>
+                                            <td><?php echo $data['rating'] ?></td>
+                                            <td><?php echo $data['note'] ?></td>
+                                            <td><?php echo $data['created_at'] ?></td>
+                                        </tr>
                                     <?php
                                     }
                                     ?>
@@ -99,9 +87,9 @@
     </div>
     </div>
     <script type="text/javascript">
-    $(document).ready(function() {
-        $('#mytable').DataTable();
-    });
+        $(document).ready(function() {
+            $('#mytable').DataTable();
+        });
     </script>
 
     <?php include_once "../../layouts/script.php" ?>

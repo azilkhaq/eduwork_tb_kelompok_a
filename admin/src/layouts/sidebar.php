@@ -39,6 +39,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="../komentar" class="waves-effect">
+                        <i class="mdi mdi-comment-outline"></i>
+                        <span>Komentar</span>
+                    </a>
+                </li>
+                <li>
                     <a href="../suggestion" class="waves-effect">
                         <i class="mdi mdi-message-processing-outline"></i>
                         <span>Kritik & Saran</span>

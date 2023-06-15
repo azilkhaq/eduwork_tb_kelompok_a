@@ -3,7 +3,40 @@ include_once("./layouts-landing/head.php");
 
 include "./config/database.php";
 
-$queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_description, a.id as tour_id  FROM tours as a LEFT JOIN categories as b ON a.category_id = b.id");
+$search = $_GET['search'] ?? "";
+$category = $_GET['category'] ?? "";
+
+$where = "WHERE 1 = 1";
+if ($search != "") {
+    $where .= " AND a.name LIKE '%$search%'";
+}
+
+if ($category != "") {
+    $where .= " AND b.id = $category";
+}
+
+$batas = 10;
+$halaman = isset($_GET['halaman']) ? (int)$_GET['halaman'] : 1;
+$halaman_awal = ($halaman > 1) ? ($halaman * $batas) - $batas : 0;
+
+$previous = $halaman - 1;
+$next = $halaman + 1;
+
+$data = mysqli_query($koneksi, "SELECT * from tours");
+$jumlah_data = mysqli_num_rows($data);
+$total_halaman = ceil($jumlah_data / $batas);
+$nomor = $halaman_awal + 1;
+
+$queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_description, a.id as tour_id, count(c.id) as total, AVG(rating) AS average_rating
+FROM tours as a 
+LEFT JOIN categories as b ON a.category_id = b.id
+LEFT JOIN comments as c ON a.id = c.tour_id
+$where
+GROUP BY a.id, a.name
+ORDER BY a.created_at DESC
+LIMIT $halaman_awal, $batas");
+
+$jumlah_data_paginate = mysqli_num_rows($queryWisata);
 ?>
 
 <body>
@@ -39,67 +72,111 @@ $queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_descript
     </section>
     <!-- BreadCrumb Ends -->
 
-    <!-- top Destination starts -->
-    <section class="trending pb-0 pt-6">
+    <section class="trending pt-6 pb-0">
         <div class="container">
-            <div class="section-title mb-6 w-50 mx-auto text-center">
-                <h2 class="mb-1">Daftar <span class="theme">Wisata</span></h2>
-            </div>
-            <div class="row align-items-center">
-
-                <?php if (mysqli_num_rows($queryWisata) > 0) { ?>
-                    <?php
-                    while ($data = mysqli_fetch_array($queryWisata)) {
-
-                        $queryImage  = mysqli_query($koneksi, "SELECT * FROM tour_images WHERE tour_id = " . $data['tour_id'] . " LIMIT 1");
-
-                        $image = "";
-                        if (mysqli_num_rows($queryImage) > 0) {
-                            while ($dataImage = mysqli_fetch_array($queryImage)) {
-                                $image = $dataImage['image'];
-                            }
-                        }
-                    ?>
-
-                        <div class="col-lg-4">
-                            <div class="trend-item box-shadow bg-white mb-4 rounded overflow-hidden">
-                                <div class="trend-image">
-                                    <img src="../uploads/<?= $image ?>" alt="image">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="list-results d-flex align-items-center justify-content-between">
+                        <div class="list-results-sort">
+                            <p class="m-0">Menampilkan 1-<?= $jumlah_data_paginate ?> of <?= $jumlah_data ?> Wisata</p>
+                        </div>
+                        <div class="click-menu d-flex align-items-center justify-content-between">
+                            <div class="sortby d-flex align-items-center justify-content-between">
+                                <div class="newsletter-form rounded overflow-hidden position-relative" style="width: 300px;">
+                                    <form action="" method="GET">
+                                        <input type="text" name="search" placeholder="Cari Wisata..">
+                                        <input type="submit" class="nir-btn bordernone rounded-0 position-absolute end-0" value="Cari">
+                                    </form>
                                 </div>
-                                <div class="trend-content-main p-4 pb-2">
-                                    <div class="trend-content">
-                                        <h5 class="theme mb-1"><?= $data['category_name'] ?></h5>
-                                        <h4><a href="destination_detail.php"><?= $data['name'] ?></a></h4>
-                                        <div class="rating-main d-flex align-items-center pb-2">
-                                            <div class="rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="destination-list">
+
+                        <?php if (mysqli_num_rows($queryWisata) > 0) { ?>
+                            <?php
+                            while ($data = mysqli_fetch_array($queryWisata)) {
+
+                                $queryImage  = mysqli_query($koneksi, "SELECT * FROM tour_images WHERE tour_id = " . $data['tour_id'] . " LIMIT 1");
+
+                                $image = "";
+                                if (mysqli_num_rows($queryImage) > 0) {
+                                    while ($dataImage = mysqli_fetch_array($queryImage)) {
+                                        $image = $dataImage['image'];
+                                    }
+                                }
+                            ?>
+
+                                <div class="trend-full bg-white rounded box-shadow overflow-hidden p-4 mb-4">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-3">
+                                            <div class="trend-item2 rounded">
+                                                <a href="./destination_detail.php?id=<?= $data['tour_id'] ?>" style="background-image: url(../uploads/<?= $image ?>);"></a>
+                                                <div class="color-overlay"></div>
                                             </div>
                                         </div>
-                                        <p class="mb-3">
-                                            <?= mb_strimwidth($data['tour_description'], 0, 230, '...') ?>
-                                        </p>
-                                        <div class="entry-meta d-flex align-items-center justify-content-between">
-                                            <div class="entry-button d-flex align-items-centermb-2">
-                                                <a href="./destination_detail.php?id=<?= $data['tour_id'] ?>" class="nir-btn" style="padding: 12px;">Selengkapnya</a>
+                                        <div class="col-lg-5 col-md-6">
+                                            <div class="trend-content position-relative text-md-start text-center">
+                                                <h3 class="mb-1"><a href="./destination_detail.php?id=<?= $data['tour_id'] ?>"><?= $data['name'] ?></a></h3>
+                                                <h6 class="mb-0" style="color: #8a8a8a; font-size: 15px;"><?= $data['address'] ?></h6>
+                                                <p class="mt-4 mb-0"><?= mb_strimwidth($data['tour_description'], 0, 200, '...') ?><br>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3">
+                                            <div class="trend-content text-md-end text-center">
+                                                <div class="rating">
+                                                    <?php for ($i = 0; $i < intval($data['average_rating']); $i++) { ?>
+                                                        <span class="fa fa-star checked"></span>
+                                                    <?php } ?>
+                                                </div>
+                                                <small><?= $data['total'] ?> Review</small>
+                                                <div class="trend-price my-2">
+
+                                                </div>
+                                                <a href="./destination_detail.php?id=<?= $data['tour_id'] ?>" class="nir-btn" style="margin-top: 100px;">View Detail</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                    <?php
-                    } ?>
-                <?php } ?>
+                            <?php } ?>
+
+                            <nav class="pb-5">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a class="page-link" <?php if ($halaman > 1) {
+                                                                    echo "href='?halaman=$previous'";
+                                                                } ?>><<</a>
+                                    </li>
+                                    <?php
+                                    for ($x = 1; $x <= $total_halaman; $x++) {
+                                    ?>
+                                        <li class="page-item <?= $halaman == $x ? "active" : "" ?>"><a class="page-link active" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+                                    <?php
+                                    }
+                                    ?>
+                                    <li class="page-item">
+                                        <a class="page-link" <?php if ($halaman < $total_halaman) {
+                                                                    echo "href='?halaman=$next'";
+                                                                } ?>>>></a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        <?php } else { ?>
+                            <center>
+                                <img src="./assets/images/empty.jpg" width="350" alt="">
+                                <br /><span>Data Tidak di Temukan</span>
+                            </center>
+                        <? } ?>
+
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- top Destination ends -->
-
 
     <?php
     include_once("./layouts-landing/footer.php");
