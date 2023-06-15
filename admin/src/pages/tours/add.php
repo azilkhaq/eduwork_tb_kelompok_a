@@ -46,7 +46,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM categories");
 
                                     <h4 class="card-title mb-4">Form Tambah Wisata</h4>
 
-                                    <form action="./process_add.php" method="POST">
+                                    <form action="process_add.php" method="POST">
 
                                         <h4 class="card-title">Gambar Wisata</h4>
                                         <p class="card-title-desc">Unggah gambar dengan pratinjau gambar.</p>

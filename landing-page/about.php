@@ -37,7 +37,7 @@ include_once("./layouts-landing/head.php");
     <!-- BreadCrumb Ends -->
 
     <!-- about-us starts -->
-    <section class="about-us pt-6">
+    <section class="about-us pt-0">
         <div class="container">
             <div class="about-image-box">
                 <div class="row d-flex align-items-center justify-content-between">
@@ -61,7 +61,7 @@ include_once("./layouts-landing/head.php");
     <!-- about-us ends -->
 
     <!-- our teams starts -->
-    <section class="our-team pb-0 pt-6">
+    <section class="our-team pt-0">
         <div class="container">
             <div class="section-title mb-6 w-75 mx-auto text-center">
                 <h2 class="mb-1">Team <span class="theme">Kami</span></h2>
@@ -71,7 +71,7 @@ include_once("./layouts-landing/head.php");
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list rounded">
                             <div class="team-image">
-                                <img src="assets/images/team/azil.jpg" alt="team">
+                                <img src="assets/images/team/azil.jpg" height="400" alt="team">
                             </div>
                             <div class="team-content text-center p-3 bg-theme">
                                 <h4 class="mb-0 white">Azil Khaq</h4>
@@ -83,7 +83,7 @@ include_once("./layouts-landing/head.php");
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list rounded">
                             <div class="team-image">
-                                <img src="assets/images/team/intan.jpg" alt="team">
+                                <img src="assets/images/team/intan.jpg"  height="400" alt="team">
                             </div>
                             <div class="team-content text-center p-3 bg-theme">
                                 <h4 class="mb-0 white">Intan Mariyahsari</h4>
@@ -95,7 +95,7 @@ include_once("./layouts-landing/head.php");
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list rounded">
                             <div class="team-image">
-                                <img src="assets/images/team/nihaya.jpg" alt="team">
+                                <img src="assets/images/team/nihaya.jpg"   height="400" alt="team">
                             </div>
                             <div class="team-content text-center p-3 bg-theme">
                                 <h4 class="mb-0 white">Nihayatun</h4>
@@ -107,7 +107,7 @@ include_once("./layouts-landing/head.php");
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list rounded">
                             <div class="team-image">
-                                <img src="assets/images/team/badri.JPG" alt="team">
+                                <img src="assets/images/team/badri.JPG"  height="400" alt="team">
                             </div>
                             <div class="team-content text-center p-3 bg-theme">
                                 <h4 class="mb-0 white">Badry Ali Mustofa</h4>

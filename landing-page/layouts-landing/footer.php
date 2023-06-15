@@ -43,7 +43,7 @@ $queryCategory  = mysqli_query($koneksi, "SELECT * FROM categories");
                             while ($data = mysqli_fetch_array($queryCategory)) {
                             ?>
                             <ul>
-                                <li><a href="destinasi.php"><?= $data['category_name'] ?></a></li>
+                                <li><a href="destinasi.php?category=<?= $data['id'] ?>"><?= $data['category_name'] ?></a></li>
                             </ul>
                             <?php }
                         } ?>
@@ -53,10 +53,10 @@ $queryCategory  = mysqli_query($koneksi, "SELECT * FROM categories");
                         <div class="footer-links">
                             <h3 class="white">Kritik dan Saran</h3>
                             <div class="newsletter-form ">
-                                <form action="#" method="get" accept-charset="utf-8" class="border-0">
-                                    <input type="text" placeholder="Email" style="margin-bottom: 10px;">
-                                    <input type="text" placeholder="Saran" style="margin-bottom: 10px;">
-                                    <button class="nir-btn ms-2" style="float: right;">Kirim</button>
+                                <form action="process_suggestion.php" method="post" accept-charset="utf-8" class="border-0">
+                                    <input type="text" placeholder="Email" name="email" style="margin-bottom: 10px;">
+                                    <input type="text" placeholder="Saran" name="suggestion" style="margin-bottom: 10px;">
+                                    <button type="submit" class="nir-btn ms-2" style="float: right;">Kirim</button>
                                 </form>
                             </div>
                         </div>

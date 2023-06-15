@@ -46,6 +46,10 @@
                                <li><a href="gallery.php">Galeri</a></li>
                            </ul>
                        </div>
+
+                       <div class="register-login d-flex align-items-center">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="nir-btn white">Login</a>
+                        </div>
                        <div id="slicknav-mobile"></div>
                    </div>
                </div><!-- /.container-fluid -->
