@@ -21,12 +21,6 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li class="menu-title">Menu</li>
                 <li>
-                    <a href="../user/user.php" class="waves-effect">
-                        <i class="bx bx-user"></i>
-                        <span>User</span>
-                    </a>
-                </li>
-                <li>
                     <a href="../tours" class="waves-effect">
                         <i class="bx bx-home-alt"></i>
                         <span>Wisata</span>
@@ -54,6 +48,12 @@
                     <a href="../suggestion" class="waves-effect">
                         <i class="mdi mdi-message-processing-outline"></i>
                         <span>Kritik & Saran</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../user/user.php" class="waves-effect">
+                        <i class="bx bx-user"></i>
+                        <span>User</span>
                     </a>
                 </li>
             </ul>
