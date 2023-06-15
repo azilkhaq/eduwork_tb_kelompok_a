@@ -179,6 +179,7 @@ $jumlah_data_paginate = mysqli_num_rows($queryWisata);
     </section>
 
     <?php
+    include_once("./layouts-landing/modal.php");
     include_once("./layouts-landing/footer.php");
 
     include_once("./layouts-landing/script.php");

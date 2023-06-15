@@ -74,8 +74,8 @@ $query = mysqli_query($koneksi, "SELECT * FROM users WHERE id = $id");
                                                 <div class="mb-3 row">
                                                     <label for="example-text-input" class="col-md-2 col-form-label">Password</label>
                                                     <div class="col-md-10">
-                                                        <input class="form-control" type="text" name="password" value="<?= $data['password'] ?>">
-                                                        <p class="info-pass">* mengisi data sama dengan mengganti password</p>
+                                                        <input class="form-control" type="text" name="password">
+                                                        <p class="info-pass">* isi jika ingin mengubah password</p>
                                                     </div>
                                                 </div>
 

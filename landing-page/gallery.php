@@ -65,10 +65,9 @@ $query = mysqli_query($koneksi, "SELECT * FROM tour_images");
                                     <img src="../uploads/<?= $data['image'] ?>" alt="image">
                                 </div>
                                 <div class="gallery-content">
-                                    <h5 class="white text-center position-absolute bottom-0 pb-4 left-50 mb-0 w-100">Barcelona - Spain</h5>
                                     <ul>
-                                        <li><a href="assets/images/trending/trending1.jpg" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="destination_detail.php"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="../uploads/<?= $data['image'] ?>" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="destination_detail.php?id=<?= $data['tour_id'] ?>"><i class="fa fa-link"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -83,6 +82,8 @@ $query = mysqli_query($koneksi, "SELECT * FROM tour_images");
     <!-- Gallery Ends -->
 
     <?php
+
+    include_once("./layouts-landing/modal.php");
     include_once("./layouts-landing/footer.php");
 
     include_once("./layouts-landing/script.php");

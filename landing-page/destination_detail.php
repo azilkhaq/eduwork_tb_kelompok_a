@@ -303,6 +303,7 @@ $queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_descript
     <?php } ?>
 
     <?php
+    include_once("./layouts-landing/modal.php");
     include_once("./layouts-landing/footer.php");
 
     include_once("./layouts-landing/script.php");

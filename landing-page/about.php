@@ -140,9 +140,8 @@ include_once("./layouts-landing/head.php");
         </form>
     </div>
 
- 
-
     <?php
+    include_once("./layouts-landing/modal.php");
     include_once("./layouts-landing/script.php");
     ?>
 
