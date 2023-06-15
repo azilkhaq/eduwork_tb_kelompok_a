@@ -7,22 +7,25 @@ $search = $_GET['search'] ?? "";
 $category = $_GET['category'] ?? "";
 
 $where = "WHERE 1 = 1";
+$whereAll = "WHERE 1 = 1";
 if ($search != "") {
     $where .= " AND a.name LIKE '%$search%'";
+    $whereAll .= " AND name LIKE '%$search%'";
 }
 
 if ($category != "") {
     $where .= " AND b.id = $category";
+    $whereAll .= " AND category_id = $category";
 }
 
-$batas = 10;
+$batas = 5;
 $halaman = isset($_GET['halaman']) ? (int)$_GET['halaman'] : 1;
 $halaman_awal = ($halaman > 1) ? ($halaman * $batas) - $batas : 0;
 
 $previous = $halaman - 1;
 $next = $halaman + 1;
 
-$data = mysqli_query($koneksi, "SELECT * from tours");
+$data = mysqli_query($koneksi, "SELECT * from tours $whereAll");
 $jumlah_data = mysqli_num_rows($data);
 $total_halaman = ceil($jumlah_data / $batas);
 $nomor = $halaman_awal + 1;
@@ -78,7 +81,7 @@ $jumlah_data_paginate = mysqli_num_rows($queryWisata);
                 <div class="col-lg-12">
                     <div class="list-results d-flex align-items-center justify-content-between">
                         <div class="list-results-sort">
-                            <p class="m-0">Menampilkan 1-<?= $jumlah_data_paginate ?> of <?= $jumlah_data ?> Wisata</p>
+                            <p class="m-0">Menampilkan <?= $jumlah_data_paginate ?> dari <?= $jumlah_data ?> Wisata</p>
                         </div>
                         <div class="click-menu d-flex align-items-center justify-content-between">
                             <div class="sortby d-flex align-items-center justify-content-between">

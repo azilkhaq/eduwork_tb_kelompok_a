@@ -112,7 +112,7 @@ $queryWisata  = mysqli_query($koneksi, "SELECT *, a.description as tour_descript
                                     <div class="description mb-2">
                                         <div class="owl-carousel">
                                             <?php foreach ($gallery as $value) { ?>
-                                                <img src="../uploads/<?= $value ?>" alt="">
+                                                <img src="../uploads/<?= $value ?>" alt="" height="175">
                                             <?php } ?>
                                         </div>
                                     </div>
