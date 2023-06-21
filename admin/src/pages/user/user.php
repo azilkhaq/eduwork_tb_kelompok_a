@@ -60,6 +60,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM users");
                                                 <th>No</th>
                                                 <th>Nama</th>
                                                 <th>Email</th>
+                                                <th>Role</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -74,6 +75,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM users");
                                                         <td><?= $no ?></td>
                                                         <td><?= $data['fullname'] ?></td>
                                                         <td><?= $data['email'] ?></td>
+                                                        <td><?= $data['role'] ?></td>
                                                         <td>
                                                             <a href="edit_user.php?id=<?= $data["id"] ?>" class="btn btn-warning btn-sm"><i class="bx bx-edit-alt font-size-16 align-middle me-1"></i>Ubah</a>
                                                             <a href="delete_user.php?id=<?= $data["id"] ?>" class="btn btn-danger btn-sm" onclick="deleteUser()"><i class="bx bx-trash-alt font-size-16 align-middle me-1"></i>Hapus</a>
