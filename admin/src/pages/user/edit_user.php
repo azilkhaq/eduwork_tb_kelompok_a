@@ -64,10 +64,21 @@ $query = mysqli_query($koneksi, "SELECT * FROM users WHERE id = $id");
                                                     </div>
                                                 </div>
 
+
                                                 <div class="mb-3 row">
                                                     <label for="example-text-input" class="col-md-2 col-form-label">Email</label>
                                                     <div class="col-md-10">
                                                         <input class="form-control" type="text" name="email" value="<?= $data['email'] ?>">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-3 row">
+                                                    <label class="col-md-2 col-form-label">Role</label>
+                                                    <div class="col-md-10">
+                                                        <select name="role" class="form-control">
+                                                            <option value="ADMIN" <?= $data['role'] == "ADMIN" ? "selected" : "" ?>>Admin</option>
+                                                            <option value="USER" <?= $data['role'] == "USER" ? "selected" : "" ?>>User</option>
+                                                        </select>
                                                     </div>
                                                 </div>
 
@@ -102,4 +113,3 @@ $query = mysqli_query($koneksi, "SELECT * FROM users WHERE id = $id");
 
     <?php include_once "../../layouts/script.php" ?>
 </body>
-

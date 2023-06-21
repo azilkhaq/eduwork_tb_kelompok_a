@@ -2,6 +2,37 @@
 include "../../../config/database.php";
 $query = mysqli_query($koneksi, "SELECT *, tours.id as tourId  FROM tours 
 LEFT JOIN categories ON tours.category_id = categories.id");
+
+$listTour = [];
+
+if (mysqli_num_rows($query) > 0) {
+    while ($data = mysqli_fetch_array($query)) {
+
+        $total = 0;
+        $queryFavorite = mysqli_query($koneksi, "SELECT COUNT(*) as total FROM tour_favorites WHERE tour_id = " . $data['tourId'] . "");
+        if (mysqli_num_rows($queryFavorite) > 0) {
+            while ($dataFavorite = mysqli_fetch_array($queryFavorite)) {
+                $total = $dataFavorite['total'];
+            }
+        }
+
+        array_push($listTour, array(
+            "tourId" => $data['tourId'],
+            "name" => $data['name'],
+            "category_name" => $data['category_name'],
+            "description" => $data['description'],
+            "address" => $data['description'],
+            "total" =>  $total,
+        ));
+    }
+}
+
+function compareByName($a, $b) {
+    return strcmp($b['total'], $a['total']);
+}
+
+usort($listTour, 'compareByName');
+
 ?>
 <?php include_once "../../layouts/head.php" ?>
 
@@ -63,25 +94,27 @@ LEFT JOIN categories ON tours.category_id = categories.id");
                                                 <th>Kategori</th>
                                                 <th>Deskripsi</th>
                                                 <th>Alamat Wisata</th>
+                                                <th>Total Favorite</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
-                                            <?php if (mysqli_num_rows($query) > 0) { ?>
+                                            <?php if (!empty($listTour)) { ?>
                                                 <?php
                                                 $no = 1;
-                                                while ($data = mysqli_fetch_array($query)) {
+                                                foreach ($listTour as $row) {
                                                 ?>
                                                     <tr>
                                                         <td><?= $no ?></td>
-                                                        <td><?= $data['name'] ?></td>
-                                                        <td><?= $data['category_name'] ?></td>
-                                                        <td><?= mb_strimwidth($data['description'], 0, 30, '...') ?></td>
-                                                        <td><?= mb_strimwidth($data['address'], 0, 30, '...') ?></td>
+                                                        <td><?= $row['name'] ?></td>
+                                                        <td><?= $row['category_name'] ?></td>
+                                                        <td><?= mb_strimwidth($row['description'], 0, 30, '...') ?></td>
+                                                        <td><?= mb_strimwidth($row['address'], 0, 30, '...') ?></td>
+                                                        <td><?= $row['total'] ?></td>
                                                         <td>
-                                                            <a href="edit.php?id=<?= $data["tourId"] ?>" class="btn btn-warning btn-sm"><i class="bx bx-edit-alt font-size-16 align-middle me-1"></i>Ubah</a>
-                                                            <a href="process_delete.php?id=<?= $data["tourId"] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin dihapus')"><i class="bx bx-trash-alt font-size-16 align-middle me-1"></i>Hapus</a>
+                                                            <a href="edit.php?id=<?= $row["tourId"] ?>" class="btn btn-warning btn-sm"><i class="bx bx-edit-alt font-size-16 align-middle me-1"></i>Ubah</a>
+                                                            <a href="process_delete.php?id=<?= $row["tourId"] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin dihapus')"><i class="bx bx-trash-alt font-size-16 align-middle me-1"></i>Hapus</a>
                                                         </td>
                                                     </tr>
                                                 <?php $no++;

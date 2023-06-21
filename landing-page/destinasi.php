@@ -1,4 +1,5 @@
 <?php
+
 include_once("./layouts-landing/head.php");
 
 include "./config/database.php";
@@ -52,6 +53,12 @@ $jumlah_data_paginate = mysqli_num_rows($queryWisata);
 
     <?php
     include_once("./layouts-landing/header.php");
+
+    $userId = 0;
+
+    if (isset($_SESSION['user_id'])) {
+        $userId = $_SESSION['user_id'];
+    }
     ?>
     <div class="tet"></div>
 
@@ -135,7 +142,15 @@ $jumlah_data_paginate = mysqli_num_rows($queryWisata);
                                                 </div>
                                                 <small><?= $data['total'] ?> Review</small>
                                                 <div class="trend-price my-2">
-
+                                                    <?php
+                                                    $queryFavorite  = mysqli_query($koneksi, "SELECT * FROM tour_favorites WHERE tour_id = '" . $data['tour_id'] . "' and user_id = '" .  $userId . "'"); ?>
+                                                    <button style="background-color: transparent;" onclick="favoriteChange('<?= $data['tour_id'] ?>')">
+                                                        <?php if (mysqli_num_rows($queryFavorite) > 0) { ?>
+                                                            <i class="fa fa-heart icon-favorite<?= $data['tour_id'] ?>" style="font-size: 35px; color:red;"></i>
+                                                        <?php } else { ?>
+                                                            <i class="fa fa-heart icon-favorite<?= $data['tour_id'] ?>" style="font-size: 35px; color:grey;"></i>
+                                                        <?php } ?>
+                                                    </button>
                                                 </div>
                                                 <a href="./destination_detail.php?id=<?= $data['tour_id'] ?>" class="nir-btn" style="margin-top: 100px;">View Detail</a>
                                             </div>
@@ -185,5 +200,41 @@ $jumlah_data_paginate = mysqli_num_rows($queryWisata);
 
     include_once("./layouts-landing/script.php");
     ?>
+
+    <script>
+        function favoriteChange(tourId) {
+
+            let userId = '<?= $userId ?>';
+
+            if (userId == 0) {
+                return alert("Harap login terlebih dahulu!");
+            }
+
+            $.ajax({
+                url: 'process_favorite.php',
+                type: 'POST',
+                data: {
+                    tourId: tourId,
+                    userId: userId,
+                },
+                success: function(response) {
+                    if (response == 1) {
+                        $(".icon-favorite" + tourId).css({
+                            "font-size": "35px",
+                            "color": "grey"
+                        });
+                    } else {
+                        $(".icon-favorite" + tourId).css({
+                            "font-size": "35px",
+                            "color": "red"
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log('Error:', error);
+                }
+            });
+        }
+    </script>
 
 </body>

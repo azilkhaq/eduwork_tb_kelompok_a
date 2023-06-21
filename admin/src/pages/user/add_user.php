@@ -61,6 +61,15 @@ $query = mysqli_query($koneksi, "SELECT * FROM users");
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
+                                            <label class="col-md-2 col-form-label">Role</label>
+                                            <div class="col-md-10">
+                                                <select name="role" class="form-control">
+                                                    <option value="ADMIN">Admin</option>
+                                                    <option value="USER">User</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
                                             <label class="col-md-2 col-form-label">Password</label>
                                             <div class="col-md-10">
                                                 <input class="form-control" type="password" name="password" autocomplete="off">
