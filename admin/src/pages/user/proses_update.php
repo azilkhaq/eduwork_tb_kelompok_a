@@ -3,6 +3,7 @@ include "../../../config/database.php";
 
 $fullname = $_POST['fullname'];
 $email = $_POST['email'];
+$role = $_POST['role'];
 $password = $_POST['password'] ?? "";
 $id = $_POST['id'];
 
@@ -11,10 +12,11 @@ if ($password != "") {
 $password = md5($_POST['password']);
 
 $sql = mysqli_query($koneksi, "UPDATE users SET fullname='$fullname', email='$email', 
-password='$password' WHERE id='$id'");
+password='$password', role='$role' WHERE id='$id'");
+
 } else {
 
-$sql = mysqli_query($koneksi, "UPDATE users SET fullname='$fullname', email='$email' WHERE id='$id'");
+$sql = mysqli_query($koneksi, "UPDATE users SET fullname='$fullname', email='$email', role='$role' WHERE id='$id'");
 }
 
 if ($sql) {
